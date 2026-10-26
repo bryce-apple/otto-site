@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" data-ground="parchment" data-type="serif">
+<head>
+<meta charset="utf-8">
+<title>Otto — site kit</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="fonts.css">
+<style>
+:root{--bg:#f3ecdc;--bg2:#ece4d1;--ink:#2a2114;--ink2:#5c4f3c;--acc:#94551a;--rule:rgba(42,33,20,.18);--rule2:rgba(42,33,20,.36);--stripe:rgba(42,33,20,.07);--on-night:none;--on-parch:block;--body:'Newsreader',Georgia,serif;--body-size:20px}
+html,body{margin:0;background:var(--bg);color:var(--ink)}
+body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:var(--acc);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:var(--ink)}
+</style>
+<meta property="og:title" content="Otto — site kit">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/og-night-1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/parch/otto-glyph.svg" type="image/svg+xml">
+<script>(function(){var r=document.documentElement;try{r.dataset.ground=localStorage.getItem('otto-ground')||'parchment'}catch(e){r.dataset.ground='parchment'}
+function mark(){document.querySelectorAll('[data-set-ground]').forEach(function(b){b.textContent=(b.dataset.setGround===r.dataset.ground?'\u25CF ':'')+b.dataset.setGround})}
+document.addEventListener('DOMContentLoaded',function(){mark();document.querySelectorAll('[data-set-ground]').forEach(function(b){b.addEventListener('click',function(){r.dataset.ground=b.dataset.setGround;try{localStorage.setItem('otto-ground',b.dataset.setGround)}catch(e){}mark()})})})})();</script>
+</head>
+<body>
+<div style="max-width:1320px;margin:0 auto;padding:48px clamp(20px,5vw,56px) 96px;box-sizing:border-box">
+  <div style="display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;padding-bottom:16px;border-bottom:1px dashed var(--rule2)">
+    <span style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:22px;letter-spacing:-0.04em">Otto</span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2)">site kit · the reusable pieces · Oct 2026</span>
+  </div>
+
+  <section style="margin-top:48px;display:flex;flex-wrap:wrap;gap:16px 44px">
+    <div style="flex:0 0 11rem;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2);padding-top:6px">00 · Which ground</div>
+    <div style="flex:1 1 30rem;max-width:38rem;display:flex;flex-direction:column;gap:16px;font-family:var(--body);font-size:19px;line-height:1.6">
+      <p style="margin:0;text-wrap:pretty">I’d choose parchment for the site, and you suspected right. The site is read the way the letter is written, at a book’s measure, for several minutes, and dark ink on warm paper is kinder over that length than cream on indigo. It also lets the site and the app be a pair: the site is the daylight cover, and the app opens on night, so the first launch feels like turning the lamp on. Night stays one click away in the header (“Page: night / parchment”, remembered between visits), and it carries the Open Graph image, where it holds up better in a feed of white cards.</p>
+      <p style="margin:0;text-wrap:pretty">On the serif: Newsreader earns its place. Everything you’d click, label or scan is in Space Grotesk and JetBrains Mono, as in the app; only the prose, the parts written as sentences, is in the serif. That split is what makes it read as a letter rather than an interface. The home page has a tweak to set it in Space Grotesk instead, so you can compare the two.</p>
+    </div>
+  </section>
+
+  <section style="margin-top:72px;display:flex;flex-wrap:wrap;gap:16px 44px">
+    <div style="flex:0 0 11rem;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2);padding-top:6px">01 · Header lockup</div>
+    <div style="flex:1 1 40rem;display:flex;flex-wrap:wrap;gap:16px">
+      <div style="--ink:#f4ecd8;--ink2:#b8b19f;--rule2:rgba(244,236,216,.32);--on-night:block;--on-parch:none;flex:1 1 22rem;background:#0d1530;color:var(--ink);padding:40px 32px;display:flex;align-items:center">
+        <div style="display:flex;align-items:center;gap:11px">
+          <img src="assets/night/otto-glyph.svg" alt="" width="34" height="34">
+          <span style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:26px;letter-spacing:-0.04em;line-height:1">Otto</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2);padding-left:12px;margin-left:2px;border-left:1px solid var(--rule2);line-height:1.35;max-width:15em">an almanac for one invented world</span>
+        </div>
+      </div>
+      <div style="flex:1 1 22rem;background:#f3ecdc;border:1px solid var(--rule);padding:40px 32px;display:flex;align-items:center">
+        <div style="display:flex;align-items:center;gap:11px">
+          <img src="assets/parch/otto-glyph.svg" alt="" width="34" height="34">
+          <span style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:26px;letter-spacing:-0.04em;line-height:1">Otto</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2);padding-left:12px;margin-left:2px;border-left:1px solid var(--rule2);line-height:1.35;max-width:15em">an almanac for one invented world</span>
+        </div>
+      </div>
+      <p style="flex:1 1 100%;margin:4px 0 0;font-family:'JetBrains Mono',monospace;font-size:11.5px;line-height:1.6;color:var(--ink2)">Glyph 34px · wordmark Space Grotesk 600, 26px, −0.04em · descriptor JetBrains Mono 10.5px caps, +0.09em, behind a hairline. Below 560px the descriptor wraps under the wordmark; never drop the glyph.</p>
+    </div>
+  </section>
+
+  <section style="margin-top:72px;display:flex;flex-wrap:wrap;gap:16px 44px">
+    <div style="flex:0 0 11rem;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2);padding-top:6px">02 · Section rules</div>
+    <div style="flex:1 1 40rem;display:flex;flex-wrap:wrap;gap:16px">
+      <div style="flex:1 1 22rem;background:#0d1530;padding:28px 24px;display:flex;flex-direction:column;gap:22px">
+        <img src="assets/night/web-rule-a.svg" alt="" style="width:100%;height:auto;opacity:.8">
+        <img src="assets/night/web-rule-b.svg" alt="" style="width:100%;height:auto;opacity:.8">
+        <img src="assets/night/web-rule-c.svg" alt="" style="width:100%;height:auto;opacity:.8">
+      </div>
+      <div style="flex:1 1 22rem;background:#f3ecdc;border:1px solid var(--rule);padding:28px 24px;display:flex;flex-direction:column;gap:22px">
+        <img src="assets/parch/web-rule-a.svg" alt="" style="width:100%;height:auto;opacity:.8">
+        <img src="assets/parch/web-rule-b.svg" alt="" style="width:100%;height:auto;opacity:.8">
+        <img src="assets/parch/web-rule-c.svg" alt="" style="width:100%;height:auto;opacity:.8">
+      </div>
+      <p style="flex:1 1 100%;margin:4px 0 0;font-family:'JetBrains Mono',monospace;font-size:11.5px;line-height:1.6;color:var(--ink2)">A ends a major section (home); B separates the rooms (How it works); C is for quiet breaks. Always at the reading column’s width, 36rem, left-aligned with the text, never centred on the page. Smaller pauses use a 1px dashed hairline.</p>
+    </div>
+  </section>
+
+  <section style="margin-top:72px;display:flex;flex-wrap:wrap;gap:16px 44px">
+    <div style="flex:0 0 11rem;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2);padding-top:6px">03 · Screenshot frame</div>
+    <div style="flex:1 1 40rem;display:flex;flex-wrap:wrap;gap:16px 44px;align-items:flex-end">
+      <figure style="margin:0;flex:1 1 26rem;max-width:36rem;display:flex;flex-direction:column;gap:12px">
+        <div style="padding:6px;border:1px solid var(--rule2);background:var(--bg2)">
+          <div style="aspect-ratio:1440/900;border:1px solid var(--rule);background:repeating-linear-gradient(135deg,var(--stripe) 0 1px,transparent 1px 10px);display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;box-sizing:border-box;font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.06em;color:var(--ink2)">SCREENSHOT · 1440 × 900<br>what it shows, in a few words</div>
+        </div>
+        <figcaption style="display:flex;gap:14px">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2);padding-top:3px;flex:none">Fig. n</span>
+          <span style="font-family:var(--body);font-size:16px;line-height:1.5;text-wrap:pretty">One or two sentences saying what you are looking at, in the first person where it helps.</span>
+        </figcaption>
+      </figure>
+      <ul style="flex:0 1 16rem;margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-family:'JetBrains Mono',monospace;font-size:11.5px;line-height:1.55;color:var(--ink2)">
+        <li>Mat: 6–7px of the darker ground, 1px rule outside, 1px fainter rule round the image.</li>
+        <li>Flat. No shadow, no tilt, no device, no rounding.</li>
+        <li>Three sizes: wide (full page, one per screen), column (36rem), actual size (1:1, say so in the caption).</li>
+        <li>Caption under, or hung in the margin beside, never on top.</li>
+        <li>Swap the striped box for &lt;img&gt; at 2× pixels, same aspect ratio.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section style="margin-top:72px;display:flex;flex-wrap:wrap;gap:16px 44px">
+    <div style="flex:0 0 11rem;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2);padding-top:6px">04 · Marginalia and footnotes</div>
+    <div style="flex:1 1 40rem;display:flex;flex-direction:column;gap:24px">
+      <div style="display:flex;flex-wrap:wrap;gap:10px 44px;align-items:flex-start">
+        <p style="flex:1 1 26rem;max-width:36rem;margin:0;font-family:var(--body);font-size:var(--body-size);line-height:1.6;text-wrap:pretty">A paragraph at a book’s measure, about sixty-five characters to the line, with a real footnote<sup style="font-family:'JetBrains Mono',monospace;font-size:11px;line-height:0"><a href="#kfn1" style="text-decoration:none;padding:0 1px">1</a></sup> and a note in the margin beside it.</p>
+        <aside style="flex:0 1 12rem;padding-top:6px;font-family:'JetBrains Mono',monospace;font-size:11.5px;line-height:1.6;color:var(--ink2)">A marginal note: mono, 11.5px, muted ink, one or two lines. A pencil mark, not a callout.</aside>
+      </div>
+      <ol style="list-style:none;margin:0;padding:14px 0 0;max-width:36rem;border-top:1px solid var(--rule2);font-family:var(--body);font-size:15px;line-height:1.5;color:var(--ink2)">
+        <li id="kfn1" style="display:flex;gap:12px"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding-top:3px;flex:none">1</span><span>Footnotes gather at the end of their section, 15px, with a ↩ back to the mark. <a href="#">↩</a></span></li>
+      </ol>
+      <p style="margin:0;font-family:'JetBrains Mono',monospace;font-size:11.5px;line-height:1.6;color:var(--ink2)">Built as a wrapping row (text 30–36rem, note 12rem, 44px gap), so on a phone the note drops under its paragraph instead of vanishing. Leave a row’s note empty more often than not.</p>
+    </div>
+  </section>
+
+  <section style="margin-top:72px;display:flex;flex-wrap:wrap;gap:16px 44px">
+    <div style="flex:0 0 11rem;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2);padding-top:6px">05 · Things you can click</div>
+    <div style="flex:1 1 40rem;display:flex;flex-wrap:wrap;gap:16px">
+      <div style="flex:1 1 22rem;background:#0d1530;padding:28px 24px;display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center">
+        <a href="#" style="display:inline-flex;padding:13px 20px;background:#e8b974;color:#0d1530;text-decoration:none;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16px;border-radius:2px">Download the trial</a>
+        <a href="#" style="font-family:'Space Grotesk',sans-serif;font-size:16px;color:#e8b974">or buy a licence</a>
+      </div>
+      <div style="flex:1 1 22rem;background:#f3ecdc;border:1px solid var(--rule);padding:28px 24px;display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center">
+        <a href="#" style="display:inline-flex;padding:13px 20px;background:#94551a;color:#f3ecdc;text-decoration:none;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16px;border-radius:2px">Download the trial</a>
+        <a href="#" style="font-family:'Space Grotesk',sans-serif;font-size:16px;color:#94551a">or buy a licence</a>
+      </div>
+      <p style="flex:1 1 100%;margin:4px 0 0;font-family:'JetBrains Mono',monospace;font-size:11.5px;line-height:1.6;color:var(--ink2)">Amber means clickable and nothing else. One filled button per screen at most. On parchment the amber is darkened to #94551a so link text reads at 5:1.</p>
+    </div>
+  </section>
+
+  <section style="margin-top:72px;display:flex;flex-wrap:wrap;gap:16px 44px">
+    <div style="flex:0 0 11rem;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2);padding-top:6px">06 · Open Graph<br>1200 × 630</div>
+    <div style="flex:1 1 40rem;min-width:0;display:flex;flex-direction:column;gap:20px">
+      <div style="overflow-x:auto">
+        <div id="og-night" style="width:1200px;height:630px;position:relative;overflow:hidden;background:#0d1530;color:#f4ecd8;box-sizing:border-box;padding:72px 80px">
+          <img src="assets/night/splash-chart.svg" alt="" style="position:absolute;right:-260px;top:40px;width:900px;opacity:.9">
+          <div style="position:relative;display:flex;flex-direction:column;height:100%;justify-content:space-between">
+            <div style="display:flex;align-items:center;gap:18px">
+              <img src="assets/night/otto-glyph.svg" alt="" width="64" height="64">
+              <span style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:56px;letter-spacing:-0.04em;line-height:1">Otto</span>
+            </div>
+            <p style="margin:0;max-width:15em;font-family:'Newsreader',Georgia,serif;font-size:44px;line-height:1.25;text-wrap:pretty">An almanac for one invented world, kept on your own computer and nowhere else.</p>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:18px;letter-spacing:.1em;text-transform:uppercase;color:#b8b19f">for Windows · free trial · [domain]</div>
+          </div>
+        </div>
+      </div>
+      <div style="overflow-x:auto">
+        <div id="og-parchment" style="width:1200px;height:630px;position:relative;overflow:hidden;background:#f3ecdc;color:#2a2114;box-sizing:border-box;padding:72px 80px;border:1px solid var(--rule)">
+          <img src="assets/parch/splash-chart.svg" alt="" style="position:absolute;right:-260px;top:40px;width:900px;opacity:.9">
+          <div style="position:relative;display:flex;flex-direction:column;height:100%;justify-content:space-between">
+            <div style="display:flex;align-items:center;gap:18px">
+              <img src="assets/parch/otto-glyph.svg" alt="" width="64" height="64">
+              <span style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:56px;letter-spacing:-0.04em;line-height:1">Otto</span>
+            </div>
+            <p style="margin:0;max-width:15em;font-family:'Newsreader',Georgia,serif;font-size:44px;line-height:1.25;text-wrap:pretty">An almanac for one invented world, kept on your own computer and nowhere else.</p>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:18px;letter-spacing:.1em;text-transform:uppercase;color:#5c4f3c">for Windows · free trial · [domain]</div>
+          </div>
+        </div>
+      </div>
+      <p style="margin:0;font-family:'JetBrains Mono',monospace;font-size:11.5px;line-height:1.6;color:var(--ink2)">Use night as the og:image; parchment for places that prefer a light card. Both at actual size here.</p>
+    </div>
+  </section>
+
+  <section style="margin-top:72px;display:flex;flex-wrap:wrap;gap:16px 44px">
+    <div style="flex:0 0 11rem;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2);padding-top:6px">07 · Pages</div>
+    <div style="flex:1 1 40rem;display:flex;flex-wrap:wrap;gap:8px 24px;font-family:'JetBrains Mono',monospace;font-size:12px">
+      <a href="index.html">Home</a><a href="how-it-works.html">How it works</a><a href="download.html">Download</a><a href="about.html">About</a><a href="404.html">404</a>
+    </div>
+  </section>
+</div>
+</body>
+</html>

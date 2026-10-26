@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" data-ground="parchment" data-type="serif">
+<head>
+<meta charset="utf-8">
+<title>How Otto works</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="fonts.css">
+<style>
+:root{--bg:#f3ecdc;--bg2:#ece4d1;--ink:#2a2114;--ink2:#5c4f3c;--acc:#94551a;--rule:rgba(42,33,20,.18);--rule2:rgba(42,33,20,.36);--stripe:rgba(42,33,20,.07);--on-night:none;--on-parch:block;--body:'Newsreader',Georgia,serif;--body-size:20px}
+:root[data-ground="night"]{--bg:#0d1530;--bg2:#080d20;--ink:#f4ecd8;--ink2:#b8b19f;--acc:#e8b974;--rule:rgba(244,236,216,.14);--rule2:rgba(244,236,216,.32);--stripe:rgba(244,236,216,.05);--on-night:block;--on-parch:none}
+:root[data-type="grotesk"]{--body:'Space Grotesk',system-ui,sans-serif;--body-size:17.5px}
+html,body{margin:0;background:var(--bg);color:var(--ink)}
+body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:var(--acc);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:var(--ink)}
+::selection{background:var(--acc);color:var(--bg)}
+</style>
+<meta property="og:title" content="How Otto works">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/og-night-1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/parch/otto-glyph.svg" type="image/svg+xml">
+<script>(function(){var r=document.documentElement;try{r.dataset.ground=localStorage.getItem('otto-ground')||'parchment'}catch(e){r.dataset.ground='parchment'}
+function mark(){document.querySelectorAll('[data-set-ground]').forEach(function(b){b.textContent=(b.dataset.setGround===r.dataset.ground?'\u25CF ':'')+b.dataset.setGround})}
+document.addEventListener('DOMContentLoaded',function(){mark();document.querySelectorAll('[data-set-ground]').forEach(function(b){b.addEventListener('click',function(){r.dataset.ground=b.dataset.setGround;try{localStorage.setItem('otto-ground',b.dataset.setGround)}catch(e){}mark()})})})})();</script>
+</head>
+<body>
+<div style="overflow-x:clip;min-height:100vh">
+
+<header style="max-width:1240px;margin:0 auto;padding:22px clamp(20px,5vw,56px) 0;box-sizing:border-box">
+  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 32px;padding-bottom:16px;border-bottom:1px dashed var(--rule2)">
+    <a href="index.html" style="display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink)">
+      <img src="assets/night/otto-glyph.svg" alt="" width="34" height="34" style="display:var(--on-night)">
+      <img src="assets/parch/otto-glyph.svg" alt="" width="34" height="34" style="display:var(--on-parch)">
+      <span style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:26px;letter-spacing:-0.04em;line-height:1">Otto</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2);padding-left:12px;margin-left:2px;border-left:1px solid var(--rule2);line-height:1.35;max-width:15em">an almanac for one invented world</span>
+    </a>
+    <nav style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase">
+      
+        
+          <span style="color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:2px">How it works</span>
+        
+        
+      
+        
+        
+          <a href="download.html" style="text-decoration:none">Download</a>
+        
+      
+        
+        
+          <a href="index.html#changes" style="text-decoration:none">Changes</a>
+        
+      
+        
+        
+          <a href="about.html" style="text-decoration:none">About</a>
+        
+      
+      <span style="display:flex;align-items:center;gap:8px;padding-left:18px;border-left:1px solid var(--rule2);color:var(--ink2)">
+        <span>Page:</span>
+        <button type="button" data-set-ground="night" style="all:unset;cursor:pointer;color:var(--acc)">night</button>
+        <span>/</span>
+        <button type="button" data-set-ground="parchment" style="all:unset;cursor:pointer;color:var(--acc)">parchment</button>
+      </span>
+    </nav>
+  </div>
+</header>
+
+<main style="max-width:1240px;margin:0 auto;padding:64px clamp(20px,5vw,56px) 0;box-sizing:border-box">
+
+  <div style="padding-left:clamp(0px,9vw,150px)">
+    <div style="display:table;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink);background:var(--bg2);border:1px solid var(--rule);padding:3px 8px 2px;transform:rotate(-0.8deg);margin-bottom:26px">How it works · four rooms, in the order you’ll use them</div>
+    <h1 style="margin:0 0 28px;max-width:20em;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(26px,2.6vw,35px);line-height:1.22;letter-spacing:-0.02em;text-wrap:pretty">The links between things, the calendars they happen on, the maps they happen in, and the book you are writing about them.</h1>
+    <div style="display:flex;flex-wrap:wrap;gap:6px 22px;font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.06em">
+      <a href="#links">1 · The link web</a><a href="#time">2 · Calendars</a><a href="#maps">3 · Maps</a><a href="#book">4 · The manuscript</a>
+    </div>
+  </div>
+
+  <section id="links" style="margin-top:96px;padding-left:clamp(0px,9vw,150px)">
+    <div style="display:table;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink);background:var(--bg2);border:1px solid var(--rule);padding:3px 8px 2px;transform:rotate(0.6deg);margin-bottom:14px">1 · The link web</div>
+    <h2 style="margin:0 0 28px;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:24px;letter-spacing:-0.015em">Type a name and it becomes a link.</h2>
+    <figure style="margin:0 0 32px;display:flex;flex-wrap:wrap;gap:12px 44px;align-items:flex-end">
+      <div style="position:relative;flex:1 1 30rem;max-width:36rem;padding:6px;border:1px solid var(--rule2);background:var(--bg2);transform:rotate(-0.35deg)"><span style="position:absolute;top:-9px;left:22px;width:72px;height:20px;background:var(--rule);opacity:.9;transform:rotate(-6deg)"></span><span style="position:absolute;top:-9px;right:22px;width:72px;height:20px;background:var(--rule);opacity:.9;transform:rotate(4deg)"></span>
+        <div style="aspect-ratio:1440/900;border:1px solid var(--rule);background:repeating-linear-gradient(135deg,var(--stripe) 0 1px,transparent 1px 10px);display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;box-sizing:border-box;font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.06em;color:var(--ink2)">SCREENSHOT · 1440 × 900<br>notes field mid-typing, the name suggestion showing</div>
+      </div>
+      <figcaption style="flex:0 1 12rem;display:flex;flex-direction:column;gap:6px">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2)">Fig. 1</span>
+        <span style="font-family:var(--body);font-size:16px;line-height:1.5;text-wrap:pretty">Halfway through typing a name after @. Otto has noticed there’s an entry for it.</span>
+      </figcaption>
+    </figure>
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;flex-wrap:wrap;gap:10px 44px;align-items:flex-start">
+        <p style="flex:1 1 30rem;max-width:36rem;margin:0;font-family:var(--body);font-size:var(--body-size);line-height:1.6;text-wrap:pretty">In any notes, write the name of something that has an entry and it becomes a link when the page is shown; type @ and Otto offers names as you go. It works the same in a chapter. You don’t stop writing to make a link; you write the name and carry on.</p>
+        <aside style="flex:0 1 12rem"></aside>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px 44px;align-items:flex-start">
+        <p style="flex:1 1 30rem;max-width:36rem;margin:0;font-family:var(--body);font-size:var(--body-size);line-height:1.6;text-wrap:pretty">Every entry shows what links to it. The structured fields count as well: give a character a birthplace, and the place lists her among the people born there. Delete an entry, and World Health will tell you what was still pointing at it.</p>
+        <aside style="flex:0 1 12rem;padding-top:6px;margin-left:0px;font-family:'JetBrains Mono',monospace;font-size:11.5px;line-height:1.6;color:var(--ink2);transform:rotate(-1.2deg);transform-origin:left top"><span style="margin-right:6px">←</span>In a big world this list is the most useful thing on the page. It’s where you find the cousin you forgot you’d invented.</aside>
+      </div>
+    </div>
+  </section>
+
+  <div style="margin-top:96px;padding-left:clamp(0px,9vw,150px)">
+    <img src="assets/night/web-rule-b.svg" alt="" style="display:var(--on-night);width:min(36rem,100%);height:auto;opacity:.75">
+    <img src="assets/parch/web-rule-b.svg" alt="" style="display:var(--on-parch);width:min(36rem,100%);height:auto;opacity:.75">
+  </div>
+
+  <section id="time" style="margin-top:80px;padding-left:clamp(0px,9vw,150px);position:relative">
+    <img src="assets/night/splash-orrery.svg" alt="" style="display:var(--on-night);position:absolute;left:calc(-1 * clamp(20px,5vw,56px) - 20vw);top:-40px;width:min(42vw,620px);opacity:.55;pointer-events:none">
+    <img src="assets/parch/splash-orrery.svg" alt="" style="display:var(--on-parch);position:absolute;left:calc(-1 * clamp(20px,5vw,56px) - 20vw);top:-40px;width:min(42vw,620px);opacity:.55;pointer-events:none">
+    <div style="position:relative">
+      <div style="display:table;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink);background:var(--bg2);border:1px solid var(--rule);padding:3px 8px 2px;transform:rotate(-0.4deg);margin-bottom:14px">2 · Calendars and the chronology</div>
+      <h2 style="margin:0 0 28px;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:24px;letter-spacing:-0.015em">Dates are kept on the world’s own calendars.</h2>
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div style="display:flex;flex-wrap:wrap;gap:10px 44px;align-items:flex-start">
+          <p style="flex:1 1 30rem;max-width:36rem;margin:0;font-family:var(--body);font-size:var(--body-size);line-height:1.6;text-wrap:pretty">A calendar is an entry like any other: its months and how long they run, its eras, where it starts counting. A world can have several (the empire’s reckoning, the temple’s, the one the sailors use) and any date can be written on any of them.</p>
+          <aside style="flex:0 1 12rem"></aside>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px 44px;align-items:flex-start">
+          <p style="flex:1 1 30rem;max-width:36rem;margin:0;font-family:var(--body);font-size:var(--body-size);line-height:1.6;text-wrap:pretty">Dates can lean on one another. “Ten years after the Fall” is a date in Otto, and if you move the Fall, everything hanging from it moves with it. The chronology draws the lot on one axis, so you can see what the south was doing while the north was at war.</p>
+          <aside style="flex:0 1 12rem;padding-top:13px;margin-left:10px;font-family:'JetBrains Mono',monospace;font-size:11.5px;line-height:1.6;color:var(--ink2);transform:rotate(0.7deg);transform-origin:left top"><span style="margin-right:6px">←</span>A date that can’t be worked out (because the Fall was never given a date) turns up in World Health rather than going quietly wrong.</aside>
+        </div>
+      </div>
+      <figure style="margin:36px 0 0;display:flex;flex-wrap:wrap;gap:12px 44px;align-items:flex-end">
+        <div style="position:relative;flex:1 1 30rem;max-width:36rem;padding:6px;border:1px solid var(--rule2);background:var(--bg2);transform:rotate(0.4deg)"><span style="position:absolute;top:-9px;right:22px;width:72px;height:20px;background:var(--rule);opacity:.9;transform:rotate(5deg)"></span>
+          <div style="aspect-ratio:1440/900;border:1px solid var(--rule);background:repeating-linear-gradient(135deg,var(--stripe) 0 1px,transparent 1px 10px);display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;box-sizing:border-box;font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.06em;color:var(--ink2)">SCREENSHOT · 1440 × 900<br>calendar editor beside the chronology</div>
+        </div>
+        <figcaption style="flex:0 1 12rem;display:flex;flex-direction:column;gap:6px">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2)">Fig. 2</span>
+          <span style="font-family:var(--body);font-size:16px;line-height:1.5;text-wrap:pretty">A calendar with thirteen months and two eras, and the chronology it feeds.</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div style="margin-top:96px;padding-left:clamp(0px,9vw,150px)">
+    <img src="assets/night/web-rule-b.svg" alt="" style="display:var(--on-night);width:min(36rem,100%);height:auto;opacity:.75">
+    <img src="assets/parch/web-rule-b.svg" alt="" style="display:var(--on-parch);width:min(36rem,100%);height:auto;opacity:.75">
+  </div>
+
+  <section id="maps" style="margin-top:80px">
+    <div style="padding-left:clamp(0px,9vw,150px)">
+      <div style="display:table;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink);background:var(--bg2);border:1px solid var(--rule);padding:3px 8px 2px;transform:rotate(0.9deg);margin-bottom:14px">3 · Maps</div>
+      <h2 style="margin:0 0 28px;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:24px;letter-spacing:-0.015em">A map is a picture you pin things to.</h2>
+    </div>
+    <figure style="margin:0 0 36px">
+      <div style="position:relative;padding:7px;border:1px solid var(--rule2);background:var(--bg2);transform:rotate(-0.2deg)"><span style="position:absolute;top:-9px;left:40px;width:84px;height:20px;background:var(--rule);opacity:.9;transform:rotate(-4deg)"></span><span style="position:absolute;top:-9px;right:40px;width:84px;height:20px;background:var(--rule);opacity:.9;transform:rotate(6deg)"></span>
+        <div style="aspect-ratio:1440/900;border:1px solid var(--rule);background:repeating-linear-gradient(135deg,var(--stripe) 0 1px,transparent 1px 10px);display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;box-sizing:border-box;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.06em;color:var(--ink2)">SCREENSHOT · 1440 × 900<br>a scanned map with pins, regions, a dashed route and the era-layer list open</div>
+      </div>
+      <figcaption style="display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:12px;padding-left:clamp(0px,9vw,150px);max-width:44rem">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2);padding-top:3px">Fig. 3</span>
+        <span style="flex:1 1 20rem;font-family:var(--body);font-size:16px;line-height:1.5;text-wrap:pretty">A pencil map, scanned. The border on the left belongs to one era layer; switch layers and it moves.</span>
+      </figcaption>
+    </figure>
+    <div style="padding-left:clamp(0px,9vw,150px);display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;flex-wrap:wrap;gap:10px 44px;align-items:flex-start">
+        <p style="flex:1 1 30rem;max-width:36rem;margin:0;font-family:var(--body);font-size:var(--body-size);line-height:1.6;text-wrap:pretty">Bring in any image: a scan of something drawn in pencil, something painted, a hex grid. Pin places onto it, draw regions and routes, and keep separate layers for separate eras, so a border can move across the centuries without a second map. Cut a sub-map from a parent (a city out of a kingdom) and it opens on its own, with its own pins.</p>
+        <aside style="flex:0 1 12rem;padding-top:9px;margin-left:-6px;font-family:'JetBrains Mono',monospace;font-size:11.5px;line-height:1.6;color:var(--ink2);transform:rotate(-0.5deg);transform-origin:left top"><span style="margin-right:6px">←</span>Pins are places, so a pin is a link: click it and you’re in the entry.</aside>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px 44px;align-items:flex-start">
+        <p style="flex:1 1 30rem;max-width:36rem;margin:0;font-family:var(--body);font-size:var(--body-size);line-height:1.6;text-wrap:pretty">If you have no map yet, the terrain generator will make one to begin from: coastline, rivers, high ground. It’s a beginning rather than a finished map, and it’s meant to be drawn over.</p>
+        <aside style="flex:0 1 12rem"></aside>
+      </div>
+    </div>
+  </section>
+
+  <div style="margin-top:96px;padding-left:clamp(0px,9vw,150px)">
+    <img src="assets/night/web-rule-b.svg" alt="" style="display:var(--on-night);width:min(36rem,100%);height:auto;opacity:.75">
+    <img src="assets/parch/web-rule-b.svg" alt="" style="display:var(--on-parch);width:min(36rem,100%);height:auto;opacity:.75">
+  </div>
+
+  <section id="book" style="margin-top:80px;padding-left:clamp(0px,4vw,64px);margin-bottom:96px">
+    <div style="display:table;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink);background:var(--bg2);border:1px solid var(--rule);padding:3px 8px 2px;transform:rotate(-0.6deg);margin-bottom:14px">4 · The manuscript</div>
+    <h2 style="margin:0 0 28px;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:24px;letter-spacing:-0.015em">The book lives beside the world it’s about.</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:28px 44px;align-items:flex-start">
+      <figure style="margin:0 0 0 -14px;flex:0 1 560px;max-width:100%;display:flex;flex-direction:column;gap:12px">
+        <div style="position:relative;padding:6px;border:1px solid var(--rule2);background:var(--bg2);transform:rotate(0.4deg)"><span style="position:absolute;top:-9px;left:22px;width:72px;height:20px;background:var(--rule);opacity:.9;transform:rotate(4deg)"></span>
+          <div style="aspect-ratio:560/360;border:1px solid var(--rule);background:repeating-linear-gradient(135deg,var(--stripe) 0 1px,transparent 1px 10px);display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;box-sizing:border-box;font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.06em;color:var(--ink2)">SCREENSHOT · 560 × 360, ACTUAL SIZE<br>writer mode, a %% note greyed in the text,<br>session tally in the corner</div>
+        </div>
+        <figcaption style="display:flex;gap:14px">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2);padding-top:3px;flex:none">Fig. 4</span>
+          <span style="font-family:var(--body);font-size:16px;line-height:1.5;text-wrap:pretty">Writer mode at actual size. The grey line is a note to myself; the tally in the corner hasn’t counted it.</span>
+        </figcaption>
+      </figure>
+      <div style="flex:1 1 22rem;max-width:34rem;display:flex;flex-direction:column;gap:20px">
+        <p style="margin:0;font-family:var(--body);font-size:var(--body-size);line-height:1.6;text-wrap:pretty">Chapters are entries too, so they link to the people in them and turn up in the same searches. Open one in writer mode and the rest of the program steps back: a page, your words, and a tally of what you’ve written this session. Anything between <span style="font-family:'JetBrains Mono',monospace;font-size:.85em">%%</span> marks is a note to yourself. It never counts, and never leaves in an export unless you ask.</p>
+        <p style="margin:0;font-family:var(--body);font-size:var(--body-size);line-height:1.6;text-wrap:pretty">Ctrl-click a chapter and it opens in a second window, in writer mode, while the world stays open in the first. Rest the pointer on a name and a card says who it is. Chapters number themselves, so moving the ninth before the fourth leaves nothing to renumber. When you want a draft, export to Word with real headings, so Word’s navigation pane shows your chapters, or to Markdown.</p>
+      </div>
+    </div>
+    <p style="margin:56px 0 0;max-width:36rem;font-family:var(--body);font-size:var(--body-size);line-height:1.6;font-style:italic;text-wrap:pretty">Those are the four big rooms. Languages, family trees, the query builder and the rest are listed in <a href="index.html#inside">the contents</a> on the first page.</p>
+  </section>
+</main>
+
+<footer style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,5vw,56px) 56px;box-sizing:border-box">
+  <div style="border-top:1px dashed var(--rule2);padding-top:28px;display:flex;flex-wrap:wrap;gap:28px 56px;align-items:flex-start">
+    <div style="display:flex;gap:14px;align-items:flex-start;flex:1 1 26rem;max-width:34rem">
+      <img src="assets/night/otto-glyph.svg" alt="" width="26" height="26" style="display:var(--on-night);flex:none;margin-top:2px">
+      <img src="assets/parch/otto-glyph.svg" alt="" width="26" height="26" style="display:var(--on-parch);flex:none;margin-top:2px">
+      <p style="margin:0;font-family:var(--body);font-size:15px;line-height:1.55;color:var(--ink2);text-wrap:pretty">Otto is made by one person. This site is set in Newsreader, Space Grotesk and JetBrains Mono, and is a handful of plain pages with nothing hidden in them.</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px 20px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2)">
+      <a href="how-it-works.html" style="text-decoration:none">How it works</a>
+      <a href="download.html" style="text-decoration:none">Download</a>
+      <a href="about.html" style="text-decoration:none">About</a>
+      <a href="mailto:hello@example.com" style="text-decoration:none">Write to me</a>
+      <span>© 2026</span>
+    </div>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>
