@@ -7,7 +7,7 @@ Plain HTML and CSS. No framework, no build step. This repository is served by Gi
 - how-it-works.html, download.html, about.html
 - 404.html: most hosts pick this up by name automatically
 - site-kit.html: the reusable pieces and design notes (you can leave this off the live site)
-- fonts.css + fonts/: Fraunces (headings), Newsreader (body), Courier Prime (labels), Space Grotesk (the wordmark), self-hosted (SIL OFL; Latin and Latin Extended). Change a face once in each page's :root (--display, --mono, --body).
+- fonts.css + fonts/: Fraunces (headings), EB Garamond (body), Courier Prime (labels), Space Grotesk (the wordmark), self-hosted (SIL OFL; Latin and Latin Extended). Change a face once in each page's :root (--display, --mono, --body).
 - assets/night, assets/parch: the brand line art, pre-coloured for each ground
 - assets/og-night-1200x630.png, assets/og-parchment-1200x630.png: share images
 
