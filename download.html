@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="fonts.css">
 <style>
-:root{--bg:#f3ecdc;--bg2:#ece4d1;--ink:#2a2114;--ink2:#5c4f3c;--acc:#94551a;--rule:rgba(42,33,20,.18);--rule2:rgba(42,33,20,.36);--stripe:rgba(42,33,20,.07);--on-night:none;--on-parch:block;--body:'Newsreader',Georgia,serif;--body-size:20px}
+:root{--bg:#f3ecdc;--bg2:#ece4d1;--ink:#2a2114;--ink2:#5c4f3c;--acc:#94551a;--rule:rgba(42,33,20,.18);--rule2:rgba(42,33,20,.36);--stripe:rgba(42,33,20,.07);--on-night:none;--on-parch:block;--body:'Newsreader',Georgia,serif;--body-size:20px;--display:'Fraunces',Georgia,serif;--mono:'Courier Prime','Courier New',monospace}
 :root[data-ground="night"]{--bg:#0d1530;--bg2:#080d20;--ink:#f4ecd8;--ink2:#b8b19f;--acc:#e8b974;--rule:rgba(244,236,216,.14);--rule2:rgba(244,236,216,.32);--stripe:rgba(244,236,216,.05);--on-night:block;--on-parch:none}
 :root[data-type="grotesk"]{--body:'Space Grotesk',system-ui,sans-serif;--body-size:17.5px}
 html,body{margin:0;background:var(--bg);color:var(--ink)}
@@ -35,9 +35,9 @@ document.addEventListener('DOMContentLoaded',function(){mark();document.querySel
       <img src="assets/night/otto-glyph.svg" alt="" width="34" height="34" style="display:var(--on-night)">
       <img src="assets/parch/otto-glyph.svg" alt="" width="34" height="34" style="display:var(--on-parch)">
       <span style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:26px;letter-spacing:-0.04em;line-height:1">Otto</span>
-      <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2);padding-left:12px;margin-left:2px;border-left:1px solid var(--rule2);line-height:1.35;max-width:15em">an almanac for one invented world</span>
+      <span style="font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2);padding-left:12px;margin-left:2px;border-left:1px solid var(--rule2);line-height:1.35;max-width:15em">an almanac for one invented world</span>
     </a>
-    <nav style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase">
+    <nav style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase">
       
         
         
@@ -73,35 +73,35 @@ document.addEventListener('DOMContentLoaded',function(){mark();document.querySel
   <img src="assets/night/splash-desk.svg" alt="" style="display:var(--on-night);position:absolute;right:-22vw;top:150px;width:min(50vw,760px);opacity:.6;pointer-events:none">
   <img src="assets/parch/splash-desk.svg" alt="" style="display:var(--on-parch);position:absolute;right:-22vw;top:150px;width:min(50vw,760px);opacity:.6;pointer-events:none">
   <div style="position:relative;padding-left:clamp(0px,9vw,150px)">
-    <div style="display:table;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink);background:var(--bg2);border:1px solid var(--rule);padding:3px 8px 2px;transform:rotate(0.9deg);margin-bottom:26px">Download and buy</div>
-    <h1 style="margin:0 0 36px;max-width:clamp(17rem,50vw,18em);font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(26px,2.6vw,35px);line-height:1.22;letter-spacing:-0.02em;text-wrap:pretty">Otto costs [price], once. The trial costs nothing.</h1>
+    <div style="display:table;font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink);background:var(--bg2);border:1px solid var(--rule);padding:3px 8px 2px;transform:rotate(0.9deg);margin-bottom:26px">Download and buy</div>
+    <h1 style="margin:0 0 36px;max-width:clamp(17rem,50vw,18em);font-family:var(--display);font-weight:500;font-size:clamp(26px,2.6vw,35px);line-height:1.22;letter-spacing:-0.005em;text-wrap:pretty">Otto costs [price], once. The trial costs nothing.</h1>
     <div style="display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center">
-      <a href="#" style="display:inline-flex;padding:13px 20px;background:var(--acc);color:var(--bg);text-decoration:none;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16px;border-radius:2px">Download the trial for Windows</a>
-      <span style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--ink2)">version 0.3.1 · 32 MB · 29 Sep 2026</span>
+      <a href="#" style="display:inline-flex;padding:13px 20px;background:var(--acc);color:var(--bg);text-decoration:none;font-family:var(--display);font-weight:500;font-size:16px;border-radius:2px">Download the trial for Windows</a>
+      <span style="font-family:var(--mono);font-size:11.5px;color:var(--ink2)">version 0.3.1 · 32 MB · 29 Sep 2026</span>
     </div>
 
     <div style="margin-top:88px;display:flex;flex-direction:column;gap:56px">
       <section style="display:flex;flex-direction:column;gap:14px">
-        <h2 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:20px;letter-spacing:-0.01em">The trial</h2>
+        <h2 style="margin:0;font-family:var(--display);font-weight:500;font-size:20px;letter-spacing:0">The trial</h2>
         <div style="display:flex;flex-wrap:wrap;gap:10px 44px;align-items:flex-start">
           <p style="flex:1 1 30rem;max-width:36rem;margin:0;font-family:var(--body);font-size:var(--body-size);line-height:1.6;text-wrap:pretty">The trial is the whole program, not a cut-down one, and it opens on the sample world so you have something to take apart. Start your own world beside it whenever you like. If you buy, you keep the same program and carry on; nothing is reinstalled, and nothing you made goes anywhere.</p>
-          <aside style="flex:0 1 12rem;padding-top:16px;margin-left:14px;font-family:'JetBrains Mono',monospace;font-size:11.5px;line-height:1.6;color:var(--ink2);transform:rotate(1deg);transform-origin:left top"><span style="margin-right:6px">←</span>[Trial length] days. If that isn’t long enough to decide, write to me.</aside>
+          <aside style="flex:0 1 12rem;padding-top:16px;margin-left:14px;font-family:var(--mono);font-size:11.5px;line-height:1.6;color:var(--ink2);transform:rotate(1deg);transform-origin:left top"><span style="margin-right:6px">←</span>[Trial length] days. If that isn’t long enough to decide, write to me.</aside>
         </div>
       </section>
 
       <section style="display:flex;flex-direction:column;gap:14px">
-        <h2 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:20px;letter-spacing:-0.01em">What “a year of updates” means</h2>
+        <h2 style="margin:0;font-family:var(--display);font-weight:500;font-size:20px;letter-spacing:0">What “a year of updates” means</h2>
         <div style="display:flex;flex-wrap:wrap;gap:10px 44px;align-items:flex-start">
           <p style="flex:1 1 30rem;max-width:36rem;margin:0;font-family:var(--body);font-size:var(--body-size);line-height:1.6;text-wrap:pretty">You buy the program, and it is yours to keep and run for as long as your computer will run it. For a year from the day you buy, every new version is yours as well. After the year Otto doesn’t stop, nag, or shrink. You stay on the version you have, and if a later one has something you want, you can buy another year. If not, don’t.</p>
-          <aside style="flex:0 1 12rem;padding-top:12px;margin-left:4px;font-family:'JetBrains Mono',monospace;font-size:11.5px;line-height:1.6;color:var(--ink2);transform:rotate(-0.9deg);transform-origin:left top"><span style="margin-right:6px">←</span>There is no subscription. Nothing renews by itself.</aside>
+          <aside style="flex:0 1 12rem;padding-top:12px;margin-left:4px;font-family:var(--mono);font-size:11.5px;line-height:1.6;color:var(--ink2);transform:rotate(-0.9deg);transform-origin:left top"><span style="margin-right:6px">←</span>There is no subscription. Nothing renews by itself.</aside>
         </div>
       </section>
 
       <section style="display:flex;flex-direction:column;gap:14px">
-        <h2 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:20px;letter-spacing:-0.01em">Which computers</h2>
+        <h2 style="margin:0;font-family:var(--display);font-weight:500;font-size:20px;letter-spacing:0">Which computers</h2>
         <div style="display:flex;flex-wrap:wrap;gap:10px 44px;align-items:flex-start">
           <p style="flex:1 1 30rem;max-width:36rem;margin:0;font-family:var(--body);font-size:var(--body-size);line-height:1.6;text-wrap:pretty">Windows, now. A Mac version is being made, and it will come when it is good rather than when it is due. The first time you run Otto, Windows may tell you it has “protected your PC”. Choose <em>More info</em>, then <em>Run anyway</em>.</p>
-          <aside style="flex:0 1 12rem;padding-top:8px;margin-left:-4px;font-family:'JetBrains Mono',monospace;font-size:11.5px;line-height:1.6;color:var(--ink2);transform:rotate(0.6deg);transform-origin:left top"><span style="margin-right:6px">←</span>Windows shows that to programs it hasn’t seen many times yet. Small makers get it a lot.</aside>
+          <aside style="flex:0 1 12rem;padding-top:8px;margin-left:-4px;font-family:var(--mono);font-size:11.5px;line-height:1.6;color:var(--ink2);transform:rotate(0.6deg);transform-origin:left top"><span style="margin-right:6px">←</span>Windows shows that to programs it hasn’t seen many times yet. Small makers get it a lot.</aside>
         </div>
       </section>
     </div>
@@ -110,19 +110,19 @@ document.addEventListener('DOMContentLoaded',function(){mark();document.querySel
   <section id="buy" style="position:relative;margin-top:80px;padding-left:clamp(0px,4vw,64px);margin-bottom:112px">
     <div style="max-width:44rem;padding-top:26px;border-top:3px double var(--rule2)">
       <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 20px;margin-bottom:20px">
-        <h2 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:24px;letter-spacing:-0.015em">What you get for [price]</h2>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2)">the whole list</span>
+        <h2 style="margin:0;font-family:var(--display);font-weight:500;font-size:24px;letter-spacing:0">What you get for [price]</h2>
+        <span style="font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2)">the whole list</span>
       </div>
       <ol style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;font-family:var(--body);font-size:var(--body-size);line-height:1.5">
-        <li style="display:flex;gap:18px;padding:10px 0;border-bottom:1px solid var(--rule)"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink2);padding-top:6px;flex:none;width:1.6em">1</span><span style="text-wrap:pretty">Otto for Windows, to keep and run for good.</span></li>
-        <li style="display:flex;gap:18px;padding:10px 0;border-bottom:1px solid var(--rule)"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink2);padding-top:6px;flex:none;width:1.6em">2</span><span style="text-wrap:pretty">Every new version released in the twelve months after you buy.</span></li>
-        <li style="display:flex;gap:18px;padding:10px 0;border-bottom:1px solid var(--rule)"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink2);padding-top:6px;flex:none;width:1.6em">3</span><span style="text-wrap:pretty">Export to JSON, Markdown, Word and CSV, all of it, with nothing extra to pay.</span></li>
-        <li style="display:flex;gap:18px;padding:10px 0;border-bottom:1px solid var(--rule)"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink2);padding-top:6px;flex:none;width:1.6em">4</span><span style="text-wrap:pretty">The sample world, to take apart and learn from.</span></li>
-        <li style="display:flex;gap:18px;padding:10px 0;border-bottom:1px solid var(--rule)"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink2);padding-top:6px;flex:none;width:1.6em">5</span><span style="text-wrap:pretty">A reply from the person who made it, if you write.</span></li>
+        <li style="display:flex;gap:18px;padding:10px 0;border-bottom:1px solid var(--rule)"><span style="font-family:var(--mono);font-size:11px;color:var(--ink2);padding-top:6px;flex:none;width:1.6em">1</span><span style="text-wrap:pretty">Otto for Windows, to keep and run for good.</span></li>
+        <li style="display:flex;gap:18px;padding:10px 0;border-bottom:1px solid var(--rule)"><span style="font-family:var(--mono);font-size:11px;color:var(--ink2);padding-top:6px;flex:none;width:1.6em">2</span><span style="text-wrap:pretty">Every new version released in the twelve months after you buy.</span></li>
+        <li style="display:flex;gap:18px;padding:10px 0;border-bottom:1px solid var(--rule)"><span style="font-family:var(--mono);font-size:11px;color:var(--ink2);padding-top:6px;flex:none;width:1.6em">3</span><span style="text-wrap:pretty">Export to JSON, Markdown, Word and CSV, all of it, with nothing extra to pay.</span></li>
+        <li style="display:flex;gap:18px;padding:10px 0;border-bottom:1px solid var(--rule)"><span style="font-family:var(--mono);font-size:11px;color:var(--ink2);padding-top:6px;flex:none;width:1.6em">4</span><span style="text-wrap:pretty">The sample world, to take apart and learn from.</span></li>
+        <li style="display:flex;gap:18px;padding:10px 0;border-bottom:1px solid var(--rule)"><span style="font-family:var(--mono);font-size:11px;color:var(--ink2);padding-top:6px;flex:none;width:1.6em">5</span><span style="text-wrap:pretty">A reply from the person who made it, if you write.</span></li>
       </ol>
       <div style="margin-top:32px;display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center">
-        <a href="#" style="display:inline-flex;padding:13px 20px;background:var(--acc);color:var(--bg);text-decoration:none;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16px;border-radius:2px">Buy a licence, [price]</a>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--ink2)">paid once · prices include tax where it applies</span>
+        <a href="#" style="display:inline-flex;padding:13px 20px;background:var(--acc);color:var(--bg);text-decoration:none;font-family:var(--display);font-weight:500;font-size:16px;border-radius:2px">Buy a licence, [price]</a>
+        <span style="font-family:var(--mono);font-size:11.5px;color:var(--ink2)">paid once · prices include tax where it applies</span>
       </div>
     </div>
   </section>
@@ -133,9 +133,9 @@ document.addEventListener('DOMContentLoaded',function(){mark();document.querySel
     <div style="display:flex;gap:14px;align-items:flex-start;flex:1 1 26rem;max-width:34rem">
       <img src="assets/night/otto-glyph.svg" alt="" width="26" height="26" style="display:var(--on-night);flex:none;margin-top:2px">
       <img src="assets/parch/otto-glyph.svg" alt="" width="26" height="26" style="display:var(--on-parch);flex:none;margin-top:2px">
-      <p style="margin:0;font-family:var(--body);font-size:15px;line-height:1.55;color:var(--ink2);text-wrap:pretty">Otto is made by one person. This site is set in Newsreader, Space Grotesk and JetBrains Mono, and is a handful of plain pages with nothing hidden in them.</p>
+      <p style="margin:0;font-family:var(--body);font-size:15px;line-height:1.55;color:var(--ink2);text-wrap:pretty">Otto is made by one person. This site is set in Fraunces, Newsreader and Courier Prime, and is a handful of plain pages with nothing hidden in them.</p>
     </div>
-    <div style="display:flex;flex-wrap:wrap;gap:8px 20px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2)">
+    <div style="display:flex;flex-wrap:wrap;gap:8px 20px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2)">
       <a href="how-it-works.html" style="text-decoration:none">How it works</a>
       <a href="download.html" style="text-decoration:none">Download</a>
       <a href="about.html" style="text-decoration:none">About</a>
