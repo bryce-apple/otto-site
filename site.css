@@ -79,7 +79,6 @@ p.aside-italic{margin:56px 0 0;max-width:36rem;font-family:var(--body);font-size
 .row>aside{--lift:8px;--shift:0px;--tilt:0deg;flex:0 1 12rem;font-family:var(--mono);font-size:11.5px;line-height:1.6;color:var(--ink2);padding-top:var(--lift);margin-left:var(--shift);transform:rotate(var(--tilt));transform-origin:left top}
 .row>aside:empty{padding:0;margin:0;transform:none}
 .arrow{margin-right:6px}
-.row>figure.snap{flex:1 1 30rem;max-width:36rem;margin:10px 0 14px}   /* a screenshot pasted into the letter */
 .signature{max-width:36rem;display:flex;flex-direction:column;gap:4px;margin-top:22px;padding-left:9rem}
 .signature .name{font-family:var(--body);font-size:calc(var(--body-size) * 1.15);font-style:italic}
 .col{--gap:12px;display:flex;flex-direction:column;gap:var(--gap)}
