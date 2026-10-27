@@ -123,15 +123,13 @@ figcaption.inline .label{padding-top:3px;flex:none}
 .splash{position:absolute;pointer-events:none}
 
 /* ---- lists and tables ----------------------------------------------- */
-.contents{columns:2 24rem;column-gap:64px;font-family:var(--body);font-size:16px;line-height:1.5}
 .contents-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 24px;padding-bottom:12px;border-bottom:3px double var(--rule2);margin-bottom:28px}
-.contents-group{break-inside:avoid;margin-bottom:26px}
-.contents-title{display:flex;gap:12px;align-items:baseline;margin-bottom:8px}
-.contents-title .numeral{font-family:var(--mono);font-size:11px;letter-spacing:.09em;color:var(--ink2)}
-.contents-title .name{font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase}
-.entry{display:flex;align-items:baseline;gap:8px;padding:2px 0 2px 34px}
-.entry .dots{flex:1 0 24px;border-bottom:1px dotted var(--rule2);transform:translateY(-4px)}
-.entry .page{font-family:var(--mono);font-size:11px;color:var(--ink2);min-width:1.5em;text-align:right}
+.features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 44px}   /* three columns; one on a phone */
+.features h3{margin:0 0 4px;padding-bottom:8px;border-bottom:3px double var(--rule2);display:flex;gap:12px;align-items:baseline;font-family:var(--mono);font-size:11px;font-weight:400;letter-spacing:.09em;text-transform:uppercase}
+.features .numeral{color:var(--ink2)}
+.features ul{margin:0;padding:0;list-style:none;font-family:var(--body);font-size:16px;line-height:1.45}
+.features li{padding:8px 0;border-bottom:1px solid var(--rule);text-wrap:pretty}
+@media (max-width:760px){.features{grid-template-columns:1fr;gap:32px 0}}
 .releases{max-width:48rem;display:flex;flex-direction:column;border-top:1px solid var(--rule2)}
 .release{display:flex;flex-wrap:wrap;gap:8px 32px;padding:18px 0;border-bottom:1px solid var(--rule)}
 .release.tall{padding:22px 0}
