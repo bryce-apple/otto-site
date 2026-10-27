@@ -5,6 +5,7 @@
 <title>Download Otto</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="site.css">
 <style>
 :root{--bg:#f3ecdc;--bg2:#ece4d1;--ink:#2a2114;--ink2:#5c4f3c;--acc:#94551a;--rule:rgba(42,33,20,.18);--rule2:rgba(42,33,20,.36);--stripe:rgba(42,33,20,.07);--on-night:none;--on-parch:block;--body:'EB Garamond',Garamond,Georgia,serif;--body-size:21px;--display:'Fraunces',Georgia,serif;--mono:'Courier Prime','Courier New',monospace}
 :root[data-ground="night"]{--bg:#0d1530;--bg2:#080d20;--ink:#f4ecd8;--ink2:#b8b19f;--acc:#e8b974;--rule:rgba(244,236,216,.14);--rule2:rgba(244,236,216,.32);--stripe:rgba(244,236,216,.05);--on-night:block;--on-parch:none}
@@ -27,119 +28,119 @@ function mark(){document.querySelectorAll('[data-set-ground]').forEach(function(
 document.addEventListener('DOMContentLoaded',function(){mark();document.querySelectorAll('[data-set-ground]').forEach(function(b){b.addEventListener('click',function(){r.dataset.ground=b.dataset.setGround;try{localStorage.setItem('otto-ground',b.dataset.setGround)}catch(e){}mark()})})})})();</script>
 </head>
 <body>
-<div style="overflow-x:clip;min-height:100vh">
+<div class="clip">
 
-<header style="max-width:1240px;margin:0 auto;padding:22px clamp(20px,5vw,56px) 0;box-sizing:border-box">
-  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 32px;padding-bottom:16px;border-bottom:1px dashed var(--rule2)">
-    <a href="index.html" style="display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink)">
-      <img src="assets/night/otto-glyph.svg" alt="" width="34" height="34" style="display:var(--on-night)">
-      <img src="assets/parch/otto-glyph.svg" alt="" width="34" height="34" style="display:var(--on-parch)">
-      <span style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:26px;letter-spacing:-0.04em;line-height:1">Otto</span>
-      <span style="font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2);padding-left:12px;margin-left:2px;border-left:1px solid var(--rule2);line-height:1.35;max-width:15em">an almanac for one invented world</span>
+<header class="wrap top">
+  <div class="masthead">
+    <a href="index.html" class="lockup">
+      <img src="assets/night/otto-glyph.svg" alt="" width="34" height="34" class="on-night">
+      <img src="assets/parch/otto-glyph.svg" alt="" width="34" height="34" class="on-parch">
+      <span class="wordmark">Otto</span>
+      <span class="tagline">an almanac for one invented world</span>
     </a>
-    <nav style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase">
+    <nav class="menu">
       
         
         
-          <a href="how-it-works.html" style="text-decoration:none">How it works</a>
+          <a href="how-it-works.html">How it works</a>
         
       
         
-          <span style="color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:2px">Download</span>
+          <span class="here">Download</span>
         
-        
-      
-        
-        
-          <a href="index.html#changes" style="text-decoration:none">Changes</a>
         
       
         
         
-          <a href="about.html" style="text-decoration:none">About</a>
+          <a href="index.html#changes">Changes</a>
         
       
-      <span style="display:flex;align-items:center;gap:8px;padding-left:18px;border-left:1px solid var(--rule2);color:var(--ink2)">
+        
+        
+          <a href="about.html">About</a>
+        
+      
+      <span class="ground">
         <span>Page:</span>
-        <button type="button" data-set-ground="night" style="all:unset;cursor:pointer;color:var(--acc)">night</button>
+        <button type="button" data-set-ground="night">night</button>
         <span>/</span>
-        <button type="button" data-set-ground="parchment" style="all:unset;cursor:pointer;color:var(--acc)">parchment</button>
+        <button type="button" data-set-ground="parchment">parchment</button>
       </span>
     </nav>
   </div>
 </header>
 
-<main style="max-width:1240px;margin:0 auto;padding:64px clamp(20px,5vw,56px) 0;box-sizing:border-box;position:relative">
+<main class="wrap page rel">
   <img src="assets/night/splash-desk.svg" alt="" style="display:var(--on-night);position:absolute;right:-22vw;top:150px;width:min(50vw,760px);opacity:.6;pointer-events:none">
   <img src="assets/parch/splash-desk.svg" alt="" style="display:var(--on-parch);position:absolute;right:-22vw;top:150px;width:min(50vw,760px);opacity:.6;pointer-events:none">
-  <div style="position:relative;padding-left:clamp(0px,9vw,150px)">
-    <div style="display:table;font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink);background:var(--bg2);border:1px solid var(--rule);padding:3px 8px 2px;transform:rotate(0.9deg);margin-bottom:26px">Download and buy</div>
-    <h1 style="margin:0 0 36px;max-width:clamp(17rem,50vw,18em);font-family:var(--display);font-weight:500;font-size:clamp(26px,2.6vw,35px);line-height:1.22;letter-spacing:-0.005em;text-wrap:pretty">Otto is free while it is in beta.</h1>
-    <div style="display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center">
-      <a href="https://github.com/bryce-apple/otto-site/releases/latest" style="display:inline-flex;padding:13px 20px;background:var(--acc);color:var(--bg);text-decoration:none;font-family:var(--display);font-weight:500;font-size:16px;border-radius:2px">Download the beta for Windows</a>
-      <span style="font-family:var(--mono);font-size:11.5px;color:var(--ink2)">version 0.4.0 beta · 32 MB · for Windows</span>
+  <div class="inset rel">
+    <div class="stamp above-title" style="--tilt:0.9deg">Download and buy</div>
+    <h1 class="title narrow">Otto is free while it is in beta.</h1>
+    <div class="actions">
+      <a href="https://github.com/bryce-apple/otto-site/releases/latest" class="button">Download the beta for Windows</a>
+      <span class="mono">version 0.4.0 beta · 32 MB · for Windows</span>
     </div>
 
-    <div style="margin-top:88px;display:flex;flex-direction:column;gap:56px">
-      <section style="display:flex;flex-direction:column;gap:14px">
-        <h2 style="margin:0;font-family:var(--display);font-weight:500;font-size:20px;letter-spacing:0">The beta</h2>
-        <div style="display:flex;flex-wrap:wrap;gap:10px 44px;align-items:flex-start">
-          <p style="flex:1 1 30rem;max-width:36rem;margin:0;font-family:var(--body);font-size:var(--body-size);line-height:1.6;text-wrap:pretty">The beta is the whole program, and it opens on the sample world so you have something to take apart. Start your own world beside it whenever you like. When Otto is finished it will cost money, and people who tested the beta will hear first; the build you have keeps working either way, and nothing you made goes anywhere.</p>
-          <aside style="flex:0 1 12rem;padding-top:16px;margin-left:14px;font-family:var(--mono);font-size:11.5px;line-height:1.6;color:var(--ink2);transform:rotate(1deg);transform-origin:left top"><span style="margin-right:6px">←</span>No time limit on the beta. What I’d like in return is a note about what stalled you, if anything did.</aside>
+    <div class="sections gap-88">
+      <section class="col" style="--gap:14px">
+        <h2 class="heading small">The beta</h2>
+        <div class="row">
+          <p>The beta is the whole program, and it opens on the sample world so you have something to take apart. Start your own world beside it whenever you like. When Otto is finished it will cost money, and people who tested the beta will hear first; the build you have keeps working either way, and nothing you made goes anywhere.</p>
+          <aside style="--lift:16px;--shift:14px;--tilt:1deg"><span class="arrow">←</span>No time limit on the beta. What I’d like in return is a note about what stalled you, if anything did.</aside>
         </div>
       </section>
 
-      <section style="display:flex;flex-direction:column;gap:14px">
-        <h2 style="margin:0;font-family:var(--display);font-weight:500;font-size:20px;letter-spacing:0">What it will cost later</h2>
-        <div style="display:flex;flex-wrap:wrap;gap:10px 44px;align-items:flex-start">
-          <p style="flex:1 1 30rem;max-width:36rem;margin:0;font-family:var(--body);font-size:var(--body-size);line-height:1.6;text-wrap:pretty">The plan, when the beta ends: you buy the program once, and it is yours to keep and run for as long as your computer will run it. For a year from the day you buy, every new version is yours as well. After the year Otto doesn’t stop, nag, or shrink. You stay on the version you have, and if a later one has something you want, you can buy another year. If not, don’t.</p>
-          <aside style="flex:0 1 12rem;padding-top:12px;margin-left:4px;font-family:var(--mono);font-size:11.5px;line-height:1.6;color:var(--ink2);transform:rotate(-0.9deg);transform-origin:left top"><span style="margin-right:6px">←</span>There is no subscription. Nothing renews by itself.</aside>
+      <section class="col" style="--gap:14px">
+        <h2 class="heading small">What it will cost later</h2>
+        <div class="row">
+          <p>The plan, when the beta ends: you buy the program once, and it is yours to keep and run for as long as your computer will run it. For a year from the day you buy, every new version is yours as well. After the year Otto doesn’t stop, nag, or shrink. You stay on the version you have, and if a later one has something you want, you can buy another year. If not, don’t.</p>
+          <aside style="--lift:12px;--shift:4px;--tilt:-0.9deg"><span class="arrow">←</span>There is no subscription. Nothing renews by itself.</aside>
         </div>
       </section>
 
-      <section style="display:flex;flex-direction:column;gap:14px">
-        <h2 style="margin:0;font-family:var(--display);font-weight:500;font-size:20px;letter-spacing:0">Which computers</h2>
-        <div style="display:flex;flex-wrap:wrap;gap:10px 44px;align-items:flex-start">
-          <p style="flex:1 1 30rem;max-width:36rem;margin:0;font-family:var(--body);font-size:var(--body-size);line-height:1.6;text-wrap:pretty">Windows, now. A Mac version is being made, and it will come when it is good rather than when it is due. The first time you run Otto, Windows may tell you it has “protected your PC”. Choose <em>More info</em>, then <em>Run anyway</em>.</p>
-          <aside style="flex:0 1 12rem;padding-top:8px;margin-left:-4px;font-family:var(--mono);font-size:11.5px;line-height:1.6;color:var(--ink2);transform:rotate(0.6deg);transform-origin:left top"><span style="margin-right:6px">←</span>Windows shows that to programs it hasn’t seen many times yet. Small makers get it a lot.</aside>
+      <section class="col" style="--gap:14px">
+        <h2 class="heading small">Which computers</h2>
+        <div class="row">
+          <p>Windows, now. A Mac version is being made, and it will come when it is good rather than when it is due. The first time you run Otto, Windows may tell you it has “protected your PC”. Choose <em>More info</em>, then <em>Run anyway</em>.</p>
+          <aside style="--shift:-4px;--tilt:0.6deg"><span class="arrow">←</span>Windows shows that to programs it hasn’t seen many times yet. Small makers get it a lot.</aside>
         </div>
       </section>
     </div>
   </div>
 
-  <section id="buy" style="position:relative;margin-top:80px;padding-left:clamp(0px,4vw,64px);margin-bottom:112px">
-    <div style="max-width:44rem;padding-top:26px;border-top:3px double var(--rule2)">
-      <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 20px;margin-bottom:20px">
-        <h2 style="margin:0;font-family:var(--display);font-weight:500;font-size:24px;letter-spacing:0">What you get</h2>
-        <span style="font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2)">the whole list</span>
+  <section id="buy" class="rel inset-less gap-80 end-112">
+    <div class="boxed">
+      <div class="head-line">
+        <h2 class="heading flush">What you get</h2>
+        <span class="label">the whole list</span>
       </div>
-      <ol style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;font-family:var(--body);font-size:var(--body-size);line-height:1.5">
-        <li style="display:flex;gap:18px;padding:10px 0;border-bottom:1px solid var(--rule)"><span style="font-family:var(--mono);font-size:11px;color:var(--ink2);padding-top:6px;flex:none;width:1.6em">1</span><span style="text-wrap:pretty">Otto for Windows, the whole program, to keep and run for good.</span></li>
-        <li style="display:flex;gap:18px;padding:10px 0;border-bottom:1px solid var(--rule)"><span style="font-family:var(--mono);font-size:11px;color:var(--ink2);padding-top:6px;flex:none;width:1.6em">2</span><span style="text-wrap:pretty">Every new beta version as it comes, announced on this site’s Changes page.</span></li>
-        <li style="display:flex;gap:18px;padding:10px 0;border-bottom:1px solid var(--rule)"><span style="font-family:var(--mono);font-size:11px;color:var(--ink2);padding-top:6px;flex:none;width:1.6em">3</span><span style="text-wrap:pretty">Export to JSON, Markdown, Word and CSV, all of it, with nothing extra to pay.</span></li>
-        <li style="display:flex;gap:18px;padding:10px 0;border-bottom:1px solid var(--rule)"><span style="font-family:var(--mono);font-size:11px;color:var(--ink2);padding-top:6px;flex:none;width:1.6em">4</span><span style="text-wrap:pretty">The sample world, to take apart and learn from.</span></li>
-        <li style="display:flex;gap:18px;padding:10px 0;border-bottom:1px solid var(--rule)"><span style="font-family:var(--mono);font-size:11px;color:var(--ink2);padding-top:6px;flex:none;width:1.6em">5</span><span style="text-wrap:pretty">A reply from the person who made it, if you write.</span></li>
+      <ol class="numbered">
+        <li><span class="num">1</span><span class="pretty">Otto for Windows, the whole program, to keep and run for good.</span></li>
+        <li><span class="num">2</span><span class="pretty">Every new beta version as it comes, announced on this site’s Changes page.</span></li>
+        <li><span class="num">3</span><span class="pretty">Export to JSON, Markdown, Word and CSV, all of it, with nothing extra to pay.</span></li>
+        <li><span class="num">4</span><span class="pretty">The sample world, to take apart and learn from.</span></li>
+        <li><span class="num">5</span><span class="pretty">A reply from the person who made it, if you write.</span></li>
       </ol>
-      <div style="margin-top:32px;display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center">
-        <a href="https://github.com/bryce-apple/otto-site/releases/latest" style="display:inline-flex;padding:13px 20px;background:var(--acc);color:var(--bg);text-decoration:none;font-family:var(--display);font-weight:500;font-size:16px;border-radius:2px">Download the beta</a>
-        <span style="font-family:var(--mono);font-size:11.5px;color:var(--ink2)">free while in beta · no account, no key</span>
+      <div class="actions gap-32">
+        <a href="https://github.com/bryce-apple/otto-site/releases/latest" class="button">Download the beta</a>
+        <span class="mono">free while in beta · no account, no key</span>
       </div>
     </div>
   </section>
 </main>
 
-<footer style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,5vw,56px) 56px;box-sizing:border-box">
-  <div style="border-top:1px dashed var(--rule2);padding-top:28px;display:flex;flex-wrap:wrap;gap:28px 56px;align-items:flex-start">
-    <div style="display:flex;gap:14px;align-items:flex-start;flex:1 1 26rem;max-width:34rem">
-      <img src="assets/night/otto-glyph.svg" alt="" width="26" height="26" style="display:var(--on-night);flex:none;margin-top:2px">
-      <img src="assets/parch/otto-glyph.svg" alt="" width="26" height="26" style="display:var(--on-parch);flex:none;margin-top:2px">
-      <p style="margin:0;font-family:var(--body);font-size:15px;line-height:1.55;color:var(--ink2);text-wrap:pretty">Otto is made by one person. This site is set in Fraunces, EB Garamond and Courier Prime, and is a handful of plain pages with nothing hidden in them.</p>
+<footer class="wrap bottom">
+  <div class="colophon">
+    <div class="colophon-note">
+      <img src="assets/night/otto-glyph.svg" alt="" width="26" height="26" class="on-night">
+      <img src="assets/parch/otto-glyph.svg" alt="" width="26" height="26" class="on-parch">
+      <p>Otto is made by one person. This site is set in Fraunces, EB Garamond and Courier Prime, and is a handful of plain pages with nothing hidden in them.</p>
     </div>
-    <div style="display:flex;flex-wrap:wrap;gap:8px 20px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2)">
-      <a href="how-it-works.html" style="text-decoration:none">How it works</a>
-      <a href="download.html" style="text-decoration:none">Download</a>
-      <a href="about.html" style="text-decoration:none">About</a>
-      <a href="mailto:hello@example.com" style="text-decoration:none">Write to me</a>
+    <div class="footer-links">
+      <a href="how-it-works.html">How it works</a>
+      <a href="download.html">Download</a>
+      <a href="about.html">About</a>
+      <a href="mailto:hello@example.com">Write to me</a>
       <span>© 2026</span>
     </div>
   </div>

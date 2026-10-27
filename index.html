@@ -5,6 +5,7 @@
 <title>Otto — an almanac for one invented world</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="site.css">
 <style>
 :root{--bg:#f3ecdc;--bg2:#ece4d1;--ink:#2a2114;--ink2:#5c4f3c;--acc:#94551a;--rule:rgba(42,33,20,.18);--rule2:rgba(42,33,20,.36);--stripe:rgba(42,33,20,.07);--on-night:none;--on-parch:block;--body:'EB Garamond',Garamond,Georgia,serif;--body-size:21px;--display:'Fraunces',Georgia,serif;--mono:'Courier Prime','Courier New',monospace}
 :root[data-ground="night"]{--bg:#0d1530;--bg2:#080d20;--ink:#f4ecd8;--ink2:#b8b19f;--acc:#e8b974;--rule:rgba(244,236,216,.14);--rule2:rgba(244,236,216,.32);--stripe:rgba(244,236,216,.05);--on-night:block;--on-parch:none}
@@ -27,380 +28,380 @@ function mark(){document.querySelectorAll('[data-set-ground]').forEach(function(
 document.addEventListener('DOMContentLoaded',function(){mark();document.querySelectorAll('[data-set-ground]').forEach(function(b){b.addEventListener('click',function(){r.dataset.ground=b.dataset.setGround;try{localStorage.setItem('otto-ground',b.dataset.setGround)}catch(e){}mark()})})})})();</script>
 </head>
 <body>
-<div style="overflow-x:clip;min-height:100vh">
+<div class="clip">
 
-<header style="max-width:1240px;margin:0 auto;padding:22px clamp(20px,5vw,56px) 0;box-sizing:border-box">
-  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 32px;padding-bottom:16px;border-bottom:1px dashed var(--rule2)">
-    <a href="index.html" style="display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink)">
-      <img src="assets/night/otto-glyph.svg" alt="" width="34" height="34" style="display:var(--on-night)">
-      <img src="assets/parch/otto-glyph.svg" alt="" width="34" height="34" style="display:var(--on-parch)">
-      <span style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:26px;letter-spacing:-0.04em;line-height:1">Otto</span>
-      <span style="font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2);padding-left:12px;margin-left:2px;border-left:1px solid var(--rule2);line-height:1.35;max-width:15em">an almanac for one invented world</span>
+<header class="wrap top">
+  <div class="masthead">
+    <a href="index.html" class="lockup">
+      <img src="assets/night/otto-glyph.svg" alt="" width="34" height="34" class="on-night">
+      <img src="assets/parch/otto-glyph.svg" alt="" width="34" height="34" class="on-parch">
+      <span class="wordmark">Otto</span>
+      <span class="tagline">an almanac for one invented world</span>
     </a>
-    <nav style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase">
+    <nav class="menu">
       
         
         
-          <a href="how-it-works.html" style="text-decoration:none">How it works</a>
-        
-      
-        
-        
-          <a href="download.html" style="text-decoration:none">Download</a>
+          <a href="how-it-works.html">How it works</a>
         
       
         
         
-          <a href="index.html#changes" style="text-decoration:none">Changes</a>
+          <a href="download.html">Download</a>
         
       
         
         
-          <a href="about.html" style="text-decoration:none">About</a>
+          <a href="index.html#changes">Changes</a>
         
       
-      <span style="display:flex;align-items:center;gap:8px;padding-left:18px;border-left:1px solid var(--rule2);color:var(--ink2)">
+        
+        
+          <a href="about.html">About</a>
+        
+      
+      <span class="ground">
         <span>Page:</span>
-        <button type="button" data-set-ground="night" style="all:unset;cursor:pointer;color:var(--acc)">night</button>
+        <button type="button" data-set-ground="night">night</button>
         <span>/</span>
-        <button type="button" data-set-ground="parchment" style="all:unset;cursor:pointer;color:var(--acc)">parchment</button>
+        <button type="button" data-set-ground="parchment">parchment</button>
       </span>
     </nav>
   </div>
 </header>
 
 
-<section style="position:relative">
+<section class="rel">
   <img data-art="night" src="assets/night/splash-chart.svg" alt="" style="display:var(--on-night);position:absolute;top:8px;right:-16vw;width:min(48vw,760px);pointer-events:none;opacity:.9">
   <img data-art="parch" src="assets/parch/splash-chart.svg" alt="" style="display:var(--on-parch);position:absolute;top:8px;right:-16vw;width:min(48vw,760px);pointer-events:none;opacity:.9">
-  <div style="position:relative;max-width:1240px;margin:0 auto;padding:64px clamp(20px,5vw,56px) 0;box-sizing:border-box">
-    <div style="padding-left:clamp(0px,9vw,150px)">
-      <div style="font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2);margin-bottom:22px">Otto 0.4 beta · for Windows · Mac to follow</div>
-      <h1 style="margin:0;max-width:clamp(17rem,50vw,19em);font-family:var(--display);font-weight:500;font-size:clamp(26px,2.6vw,35px);line-height:1.22;letter-spacing:-0.005em;text-wrap:pretty">Finally, one single place to store every person, planet, river, war, verb, technology, and everything else in the world you’ve been inventing.</h1>
+  <div class="wrap page rel">
+    <div class="inset">
+      <div class="label kicker">Otto 0.4 beta · for Windows · Mac to follow</div>
+      <h1 class="title">Finally, one single place to store every person, planet, river, war, verb, technology, and everything else in the world you’ve been inventing.</h1>
 
-      <div style="margin-top:64px;font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2);margin-bottom:18px">A letter from Otto’s maker</div>
-      <div style="display:flex;flex-direction:column;gap:2px">
-        <p style="margin:0 0 10px;max-width:36rem;font-family:var(--body);font-size:var(--body-size);line-height:1.6;font-style:italic">Dear creator and writer,</p>
-        <div style="display:flex;flex-wrap:wrap;gap:10px 44px;align-items:flex-start">
-          <p style="flex:1 1 30rem;max-width:36rem;margin:0;font-family:var(--body);font-size:var(--body-size);line-height:1.6;text-wrap:pretty;text-indent:0em">I can remember the exact moment when I started creating the universe in my head. I was at a birthday party for my cousin’s kid, and I looked at the mountains behind their house, and I had an idea for a story. That idea came to nothing in the end, but it led to another idea, and another and another, until there were so many that I was remaking the entire world, end to end.</p>
-		  <p style="flex:1 1 30rem;max-width:36rem;margin:0;font-family:var(--body);font-size:var(--body-size);line-height:1.6;text-wrap:pretty;text-indent:1.6em">The problem was that universes and worlds are big, and so I needed a place to put everything. First I used text files (not great), then I used Word (worse). Then I tried to make a single PDF with lots of internal links (woof), and from there I transitioned to a maze of Google Drive folders (woof woof). Each time I made a move to a different way of organizing things, I lost big chunks of time.</p>
-		  <p style="flex:1 1 30rem;max-width:36rem;margin:0;font-family:var(--body);font-size:var(--body-size);line-height:1.6;text-wrap:pretty;text-indent:1.6em">So I went looking for </p>
-		  <p style="flex:1 1 30rem;max-width:36rem;margin:0;font-family:var(--body);font-size:var(--body-size);line-height:1.6;text-wrap:pretty;text-indent:1.6em">Otto is what I built instead. You make an entry for each thing in your world (a person, a place, a faction, a language, a calendar, a battle, a ring) and the entries know about each other. Write that someone was born in Harrowgate, and Harrowgate’s page lists her among the people born there. You didn’t have to do that, and you never will.</p>
+      <div class="label lead-in">A letter from Otto’s maker</div>
+      <div class="letter col" style="--gap:2px">
+        <p class="dear">Dear creator and writer,</p>
+        <div class="row">
+          <p>I can remember the exact moment when I started creating the universe in my head. I was at a birthday party for my cousin’s kid, and I looked at the mountains behind their house, and I had an idea for a story. That idea came to nothing in the end, but it led to another idea, and another and another, until there were so many that I was remaking the entire world, end to end.</p>
+		  <p>The problem was that universes and worlds are big, and so I needed a place to put everything. First I used text files (not great), then I used Word (worse). Then I tried to make a single PDF with lots of internal links (woof), and from there I transitioned to a maze of Google Drive folders (woof woof). Each time I made a move to a different way of organizing things, I lost big chunks of time.</p>
+		  <p>So I went looking for </p>
+		  <p>Otto is what I built instead. You make an entry for each thing in your world (a person, a place, a faction, a language, a calendar, a battle, a ring) and the entries know about each other. Write that someone was born in Harrowgate, and Harrowgate’s page lists her among the people born there. You didn’t have to do that, and you never will.</p>
 
-		  <p style="flex:1 1 30rem;max-width:36rem;margin:0;font-family:var(--body);font-size:var(--body-size);line-height:1.6;text-wrap:pretty;text-indent:1.6em">a For a long time my world lived in a folder. A document for each country, a spreadsheet of kings, a map with pencil all over the back of it, and a file called NAMES-FINAL-2 that was neither. Every time I sat down to write a chapter I spent the first half hour finding out what I had already decided.</p>
-		   <p style="flex:1 1 30rem;max-width:36rem;margin:0;font-family:var(--body);font-size:var(--body-size);line-height:1.6;text-wrap:pretty;text-indent:1.6em">Otto is what I built instead. You make an entry for each thing in your world (a person, a place, a faction, a language, a calendar, a battle, a ring) and the entries know about each other. Write that someone was born in Harrowgate, and Harrowgate’s page lists her among the people born there. You didn’t have to do that, and you never will.</p>
-          <aside style="flex:0 1 12rem;padding-top:13px;margin-left:0px;font-family:var(--mono);font-size:11.5px;line-height:1.6;color:var(--ink2);transform:rotate(-1.2deg);transform-origin:left top"><span style="margin-right:6px">←</span>The folders are still on my desktop. I don’t open them.</aside>
+		  <p>a For a long time my world lived in a folder. A document for each country, a spreadsheet of kings, a map with pencil all over the back of it, and a file called NAMES-FINAL-2 that was neither. Every time I sat down to write a chapter I spent the first half hour finding out what I had already decided.</p>
+		   <p>Otto is what I built instead. You make an entry for each thing in your world (a person, a place, a faction, a language, a calendar, a battle, a ring) and the entries know about each other. Write that someone was born in Harrowgate, and Harrowgate’s page lists her among the people born there. You didn’t have to do that, and you never will.</p>
+          <aside style="--lift:13px;--tilt:-1.2deg"><span class="arrow">←</span>The folders are still on my desktop. I don’t open them.</aside>
         </div>
-        <div style="display:flex;flex-wrap:wrap;gap:10px 44px;align-items:flex-start">
-          <p style="flex:1 1 30rem;max-width:36rem;margin:0;font-family:var(--body);font-size:var(--body-size);line-height:1.6;text-wrap:pretty;text-indent:1.6em">Otto is what I built instead. You make an entry for each thing in your world (a person, a place, a faction, a language, a calendar, a battle, a ring) and the entries know about each other. Write that someone was born in Harrowgate, and Harrowgate’s page lists her among the people born there. You didn’t have to do that, and you never will.</p>
-          <aside style="flex:0 1 12rem;padding-top:9px;margin-left:10px;font-family:var(--mono);font-size:11.5px;line-height:1.6;color:var(--ink2);transform:rotate(0.7deg);transform-origin:left top"><span style="margin-right:6px">←</span>Harrowgate is made up for this page. The sample world that opens on first launch has its own.</aside>
+        <div class="row">
+          <p>Otto is what I built instead. You make an entry for each thing in your world (a person, a place, a faction, a language, a calendar, a battle, a ring) and the entries know about each other. Write that someone was born in Harrowgate, and Harrowgate’s page lists her among the people born there. You didn’t have to do that, and you never will.</p>
+          <aside style="--lift:9px;--shift:10px;--tilt:0.7deg"><span class="arrow">←</span>Harrowgate is made up for this page. The sample world that opens on first launch has its own.</aside>
         </div>
-        <div style="display:flex;flex-wrap:wrap;gap:10px 44px;align-items:flex-start">
-          <p style="flex:1 1 30rem;max-width:36rem;margin:0;font-family:var(--body);font-size:var(--body-size);line-height:1.6;text-wrap:pretty;text-indent:1.6em">Dates are kept on your world’s own calendars, with their own months and eras, and you can write “ten years after the Fall” and have it mean something. Maps are your own images with places pinned to them. And the book sits beside it all: chapters are entries too, written in a quiet full-screen writer and sent to Word, with proper headings, when you want a draft you can print.</p>
-          <aside style="flex:0 1 12rem"></aside>
+        <div class="row">
+          <p>Dates are kept on your world’s own calendars, with their own months and eras, and you can write “ten years after the Fall” and have it mean something. Maps are your own images with places pinned to them. And the book sits beside it all: chapters are entries too, written in a quiet full-screen writer and sent to Word, with proper headings, when you want a draft you can print.</p>
+          <aside></aside>
         </div>
-        <div style="display:flex;flex-wrap:wrap;gap:10px 44px;align-items:flex-start">
-          <p style="flex:1 1 30rem;max-width:36rem;margin:0;font-family:var(--body);font-size:var(--body-size);line-height:1.6;text-wrap:pretty;text-indent:1.6em">It runs on your computer and nowhere else. There is no account. I don’t know who you are, and I would like to keep it that way.</p>
-          <aside style="flex:0 1 12rem;padding-top:16px;margin-left:-6px;font-family:var(--mono);font-size:11.5px;line-height:1.6;color:var(--ink2);transform:rotate(-0.5deg);transform-origin:left top"><span style="margin-right:6px">←</span>This is the part people ask about most. More under <a href="#promises">three promises</a>, below.</aside>
+        <div class="row">
+          <p>It runs on your computer and nowhere else. There is no account. I don’t know who you are, and I would like to keep it that way.</p>
+          <aside style="--lift:16px;--shift:-6px;--tilt:-0.5deg"><span class="arrow">←</span>This is the part people ask about most. More under <a href="#promises">three promises</a>, below.</aside>
         </div>
-        <div style="max-width:36rem;display:flex;flex-direction:column;gap:4px;margin-top:22px;padding-left:9rem">
-          <span style="font-family:var(--body);font-size:calc(var(--body-size) * 1.15);font-style:italic">[Your name]</span>
-          <span style="font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2)">written October 2026</span>
+        <div class="signature">
+          <span class="name">[Your name]</span>
+          <span class="label">written October 2026</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<main style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,5vw,56px);box-sizing:border-box">
+<main class="wrap">
 
-  <section id="pictures" style="margin-top:112px">
-    <div style="padding-left:clamp(0px,9vw,150px);margin-bottom:26px">
-      <div style="display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink);background:var(--bg2);border:1px solid var(--rule);padding:3px 8px 2px;margin-bottom:14px;transform:rotate(-0.8deg)">What it looks like</div>
-      <h2 style="margin:0;font-family:var(--display);font-weight:500;font-size:24px;letter-spacing:0">Five pictures of the actual program</h2>
+  <section id="pictures" class="gap-112">
+    <div class="inset below-26">
+      <div class="stamp inline" style="--tilt:-0.8deg">What it looks like</div>
+      <h2 class="heading flush">Five pictures of the actual program</h2>
     </div>
 
-    <figure style="margin:0">
-      <div style="padding:7px;border:1px solid var(--rule2);background:var(--bg2)">
-        <img src="assets/shots/character.webp" alt="A character entry in Otto: fields down the page, each linked name in amber" style="display:block;width:100%;height:auto;aspect-ratio:1440/900;border:1px solid var(--rule)">
+    <figure>
+      <div class="frame thick">
+        <img src="assets/shots/character.webp" alt="A character entry in Otto: fields down the page, each linked name in amber">
       </div>
-      <figcaption style="display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:12px;padding-left:clamp(0px,9vw,150px);max-width:44rem">
-        <span style="font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2);padding-top:3px">Fig. 1</span>
-        <span style="flex:1 1 20rem;font-family:var(--body);font-size:16px;line-height:1.5;text-wrap:pretty">An entry for a character. Every name in amber is a link she already had, because the entry on the other end exists. Further down the page: everything else in the world that mentions her, a list nobody typed.</span>
+      <figcaption class="under">
+        <span class="label">Fig. 1</span>
+        <span class="caption">An entry for a character. Every name in amber is a link she already had, because the entry on the other end exists. Further down the page: everything else in the world that mentions her, a list nobody typed.</span>
       </figcaption>
     </figure>
 
-    <div style="padding-left:clamp(0px,9vw,150px);margin-top:64px;display:flex;flex-direction:column;gap:56px">
-      <figure style="margin:0;display:flex;flex-wrap:wrap;gap:12px 44px;align-items:flex-end">
-        <div style="position:relative;flex:1 1 30rem;max-width:36rem;padding:6px;border:1px solid var(--rule2);background:var(--bg2);transform:rotate(-0.35deg)"><span style="position:absolute;top:-9px;left:22px;width:72px;height:20px;background:var(--rule);opacity:.9;transform:rotate(-6deg)"></span><span style="position:absolute;top:-9px;right:22px;width:72px;height:20px;background:var(--rule);opacity:.9;transform:rotate(5deg)"></span>
-          <img src="assets/shots/chronology.webp" alt="The chronology: three events of the sample world in order on one axis" style="display:block;width:100%;height:auto;aspect-ratio:1440/900;border:1px solid var(--rule)">
+    <div class="inset gap-64 sections">
+      <figure class="beside">
+        <div class="frame half" style="--tilt:-0.35deg"><span class="tape" style="--tilt:-6deg"></span><span class="tape right" style="--tilt:5deg"></span>
+          <img src="assets/shots/chronology.webp" alt="The chronology: three events of the sample world in order on one axis">
         </div>
-        <figcaption style="flex:0 1 12rem;display:flex;flex-direction:column;gap:6px">
-          <span style="font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2)">Fig. 2</span>
-          <span style="font-family:var(--body);font-size:16px;line-height:1.5;text-wrap:pretty">The chronology. Every dated thing in the sample world in order, with where it happened; several calendars can share the one axis.</span>
+        <figcaption class="side">
+          <span class="label">Fig. 2</span>
+          <span class="caption">The chronology. Every dated thing in the sample world in order, with where it happened; several calendars can share the one axis.</span>
         </figcaption>
       </figure>
 
-      <figure style="margin:0;display:flex;flex-wrap:wrap;gap:12px 44px;align-items:flex-end">
-        <div style="flex:1 1 30rem;max-width:36rem;padding:6px;border:1px solid var(--rule2);background:var(--bg2)">
-          <img src="assets/shots/map.webp" alt="A generated terrain map with three places pinned, a region and a road drawn on it" style="display:block;width:100%;height:auto;aspect-ratio:1440/900;border:1px solid var(--rule)">
+      <figure class="beside">
+        <div class="frame half">
+          <img src="assets/shots/map.webp" alt="A generated terrain map with three places pinned, a region and a road drawn on it">
         </div>
-        <figcaption style="flex:0 1 12rem;display:flex;flex-direction:column;gap:6px">
-          <span style="font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2)">Fig. 3</span>
-          <span style="font-family:var(--body);font-size:16px;line-height:1.5;text-wrap:pretty">A map. This one came out of the terrain generator; the pins are places, the shaded area is a region, the dashed line is the Coast Road. Any of them opens its entry.</span>
+        <figcaption class="side">
+          <span class="label">Fig. 3</span>
+          <span class="caption">A map. This one came out of the terrain generator; the pins are places, the shaded area is a region, the dashed line is the Coast Road. Any of them opens its entry.</span>
         </figcaption>
       </figure>
 
-      <figure style="margin:0;display:flex;flex-wrap:wrap;gap:12px 44px;align-items:flex-start">
-        <div style="position:relative;flex:0 1 560px;max-width:100%;padding:6px;border:1px solid var(--rule2);background:var(--bg2);box-sizing:border-box;margin-left:-18px;transform:rotate(0.4deg)"><span style="position:absolute;top:-9px;left:22px;width:72px;height:20px;background:var(--rule);opacity:.9;transform:rotate(4deg)"></span>
-          <img src="assets/shots/writer.webp" alt="Writer mode at actual size, a hover card open over a character’s name" style="display:block;width:100%;height:auto;aspect-ratio:560/360;border:1px solid var(--rule)">
+      <figure class="beside top">
+        <div class="frame actual" style="--tilt:0.4deg"><span class="tape" style="--tilt:4deg"></span>
+          <img src="assets/shots/writer.webp" alt="Writer mode at actual size, a hover card open over a character’s name" class="small">
         </div>
-        <figcaption style="flex:0 1 14rem;display:flex;flex-direction:column;gap:6px;padding-top:4px">
-          <span style="font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2)">Fig. 4 · actual size</span>
-          <span style="font-family:var(--body);font-size:16px;line-height:1.5;text-wrap:pretty">Writing a chapter. Rest the pointer on a name and a card says who they are, so you needn’t leave the page to check.</span>
+        <figcaption class="side wider">
+          <span class="label">Fig. 4 · actual size</span>
+          <span class="caption">Writing a chapter. Rest the pointer on a name and a card says who they are, so you needn’t leave the page to check.</span>
         </figcaption>
       </figure>
 
-      <figure style="margin:0;display:flex;flex-wrap:wrap;gap:12px 44px;align-items:flex-end">
-        <div style="flex:1 1 30rem;max-width:36rem;padding:6px;border:1px solid var(--rule2);background:var(--bg2)">
-          <img src="assets/shots/health.webp" alt="World Health listing a duplicate search key, an unwritten beat and two orphaned entries" style="display:block;width:100%;height:auto;aspect-ratio:1440/900;border:1px solid var(--rule)">
+      <figure class="beside">
+        <div class="frame half">
+          <img src="assets/shots/health.webp" alt="World Health listing a duplicate search key, an unwritten beat and two orphaned entries">
         </div>
-        <figcaption style="flex:0 1 12rem;display:flex;flex-direction:column;gap:6px">
-          <span style="font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2)">Fig. 5</span>
-          <span style="font-family:var(--body);font-size:16px;line-height:1.5;text-wrap:pretty">World Health on the sample world: a search key two entries share, a story beat not yet written, two entries nothing links to. Each line is a link to the entry.</span>
+        <figcaption class="side">
+          <span class="label">Fig. 5</span>
+          <span class="caption">World Health on the sample world: a search key two entries share, a story beat not yet written, two entries nothing links to. Each line is a link to the entry.</span>
         </figcaption>
       </figure>
     </div>
   </section>
 
-  <div style="margin:104px 0 0;padding-left:clamp(0px,9vw,150px)">
-    <img src="assets/night/web-rule-a.svg" alt="" style="display:var(--on-night);width:min(36rem,100%);height:auto;opacity:.8">
-    <img src="assets/parch/web-rule-a.svg" alt="" style="display:var(--on-parch);width:min(36rem,100%);height:auto;opacity:.8">
+  <div class="inset gap-104">
+    <img src="assets/night/web-rule-a.svg" alt="" class="on-night rule">
+    <img src="assets/parch/web-rule-a.svg" alt="" class="on-parch rule">
   </div>
 
-  <section id="promises" style="margin-top:72px;padding-left:clamp(0px,9vw,150px)">
-    <div style="display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink);background:var(--bg2);border:1px solid var(--rule);padding:3px 8px 2px;margin-bottom:14px;transform:rotate(0.6deg)">Three promises</div>
-    <h2 style="margin:0 0 40px;max-width:36rem;font-family:var(--display);font-weight:500;font-size:24px;letter-spacing:0;text-wrap:pretty">How it is built, in plain words, so you can decide whether to trust it with ten years of work</h2>
+  <section id="promises" class="inset gap-72">
+    <div class="stamp inline" style="--tilt:0.6deg">Three promises</div>
+    <h2 class="heading roomy">How it is built, in plain words, so you can decide whether to trust it with ten years of work</h2>
 
-    <div style="display:flex;flex-direction:column;gap:44px">
-      <div style="display:flex;flex-direction:column;gap:12px">
-        <h3 style="margin:0;max-width:36rem;display:flex;gap:14px;align-items:baseline;font-family:var(--display);font-weight:500;font-size:19px;letter-spacing:0"><span style="font-family:var(--mono);font-size:12px;color:var(--ink2);font-weight:400">i.</span>It runs on your machine and nowhere else.</h3>
-        <div style="display:flex;flex-wrap:wrap;gap:10px 44px;align-items:flex-start">
-          <p style="flex:1 1 30rem;max-width:36rem;margin:0;font-family:var(--body);font-size:var(--body-size);line-height:1.6;text-wrap:pretty">There is no account to make and no server for Otto to talk to. Nothing is sent anywhere. It works with the network cable out, on a train, in a cottage with no signal. Your whole world is one SQLite file<sup style="font-family:var(--mono);font-size:11px;line-height:0"><a href="#fn1" id="r1" style="text-decoration:none;padding:0 1px">1</a></sup> that you can copy, back up, or carry to another computer on a stick.</p>
-          <aside style="flex:0 1 12rem;padding-top:12px;margin-left:14px;font-family:var(--mono);font-size:11.5px;line-height:1.6;color:var(--ink2);transform:rotate(1deg);transform-origin:left top"><span style="margin-right:6px">←</span>Try it with the wifi switched off. Nothing changes.</aside>
+    <div class="col" style="--gap:44px">
+      <div class="col">
+        <h3 class="subheading"><span class="num">i.</span>It runs on your machine and nowhere else.</h3>
+        <div class="row">
+          <p>There is no account to make and no server for Otto to talk to. Nothing is sent anywhere. It works with the network cable out, on a train, in a cottage with no signal. Your whole world is one SQLite file<sup class="fn"><a href="#fn1" id="r1">1</a></sup> that you can copy, back up, or carry to another computer on a stick.</p>
+          <aside style="--lift:12px;--shift:14px;--tilt:1deg"><span class="arrow">←</span>Try it with the wifi switched off. Nothing changes.</aside>
         </div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:12px">
-        <h3 style="margin:0;max-width:36rem;display:flex;gap:14px;align-items:baseline;font-family:var(--display);font-weight:500;font-size:19px;letter-spacing:0"><span style="font-family:var(--mono);font-size:12px;color:var(--ink2);font-weight:400">ii.</span>What you write stays yours, in a form you can read without me.</h3>
-        <div style="display:flex;flex-wrap:wrap;gap:10px 44px;align-items:flex-start">
-          <p style="flex:1 1 30rem;max-width:36rem;margin:0;font-family:var(--body);font-size:var(--body-size);line-height:1.6;text-wrap:pretty">At any moment you can export the lot as plain JSON or Markdown: every entry, every link, every date. Before each update Otto sets a backup aside<sup style="font-family:var(--mono);font-size:11px;line-height:0"><a href="#fn2" id="r2" style="text-decoration:none;padding:0 1px">2</a></sup>, and every entry keeps its own version history, so last Tuesday’s draft of a chapter is still there. Updates change the program. They never touch what you wrote.</p>
-          <aside style="flex:0 1 12rem;padding-top:8px;margin-left:4px;font-family:var(--mono);font-size:11.5px;line-height:1.6;color:var(--ink2);transform:rotate(-0.9deg);transform-origin:left top"><span style="margin-right:6px">←</span>Markdown opens in any text editor made in the last forty years, and will in the next forty.</aside>
+      <div class="col">
+        <h3 class="subheading"><span class="num">ii.</span>What you write stays yours, in a form you can read without me.</h3>
+        <div class="row">
+          <p>At any moment you can export the lot as plain JSON or Markdown: every entry, every link, every date. Before each update Otto sets a backup aside<sup class="fn"><a href="#fn2" id="r2">2</a></sup>, and every entry keeps its own version history, so last Tuesday’s draft of a chapter is still there. Updates change the program. They never touch what you wrote.</p>
+          <aside style="--shift:4px;--tilt:-0.9deg"><span class="arrow">←</span>Markdown opens in any text editor made in the last forty years, and will in the next forty.</aside>
         </div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:12px">
-        <h3 style="margin:0;max-width:36rem;display:flex;gap:14px;align-items:baseline;font-family:var(--display);font-weight:500;font-size:19px;letter-spacing:0"><span style="font-family:var(--mono);font-size:12px;color:var(--ink2);font-weight:400">iii.</span>The furniture stays where it is.</h3>
-        <div style="display:flex;flex-wrap:wrap;gap:10px 44px;align-items:flex-start">
-          <p style="flex:1 1 30rem;max-width:36rem;margin:0;font-family:var(--body);font-size:var(--body-size);line-height:1.6;text-wrap:pretty">Otto comes with its own kinds of thing (people, places, factions, languages, calendars, events, artifacts, ideas) and those are fixed. Whatever you add goes alongside them: a form for ships, a category for minor gods. No update will rename your additions or take them away. I won’t rearrange the room while you’re out of it.</p>
-          <aside style="flex:0 1 12rem"></aside>
+      <div class="col">
+        <h3 class="subheading"><span class="num">iii.</span>The furniture stays where it is.</h3>
+        <div class="row">
+          <p>Otto comes with its own kinds of thing (people, places, factions, languages, calendars, events, artifacts, ideas) and those are fixed. Whatever you add goes alongside them: a form for ships, a category for minor gods. No update will rename your additions or take them away. I won’t rearrange the room while you’re out of it.</p>
+          <aside></aside>
         </div>
       </div>
     </div>
 
-    <ol style="list-style:none;margin:48px 0 0;padding:18px 0 0;max-width:36rem;border-top:1px solid var(--rule2);display:flex;flex-direction:column;gap:10px;font-family:var(--body);font-size:15px;line-height:1.5;color:var(--ink2)">
-      <li id="fn1" style="display:flex;gap:12px"><span style="font-family:var(--mono);font-size:11px;padding-top:3px;flex:none">1</span><span style="text-wrap:pretty">SQLite is the database format inside most phones and web browsers. It is open, thoroughly documented, and the Library of Congress lists it among its recommended formats for keeping data. <a href="#r1" style="text-decoration:none">↩</a></span></li>
-      <li id="fn2" style="display:flex;gap:12px"><span style="font-family:var(--mono);font-size:11px;padding-top:3px;flex:none">2</span><span style="text-wrap:pretty">The backups rotate: when a new one is made the oldest goes, so they never quietly fill your disk. <a href="#r2" style="text-decoration:none">↩</a></span></li>
+    <ol class="footnotes">
+      <li id="fn1"><span class="num">1</span><span class="pretty">SQLite is the database format inside most phones and web browsers. It is open, thoroughly documented, and the Library of Congress lists it among its recommended formats for keeping data. <a href="#r1">↩</a></span></li>
+      <li id="fn2"><span class="num">2</span><span class="pretty">The backups rotate: when a new one is made the oldest goes, so they never quietly fill your disk. <a href="#r2">↩</a></span></li>
     </ol>
   </section>
 
-  <section id="inside" style="margin-top:120px">
-    <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 24px;padding-bottom:12px;border-bottom:3px double var(--rule2);margin-bottom:28px">
-      <h2 style="margin:0;font-family:var(--display);font-weight:500;font-size:24px;letter-spacing:0">What’s inside</h2>
-      <span style="font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2)">contents, in the order you’d meet them · numbers point to <a href="how-it-works.html">How it works</a></span>
+  <section id="inside" class="gap-120">
+    <div class="contents-head">
+      <h2 class="heading flush">What’s inside</h2>
+      <span class="label">contents, in the order you’d meet them · numbers point to <a href="how-it-works.html">How it works</a></span>
     </div>
-    <div style="columns:2 24rem;column-gap:64px;font-family:var(--body);font-size:16px;line-height:1.5">
+    <div class="contents">
       
-        <div style="break-inside:avoid;margin-bottom:26px">
-          <div style="display:flex;gap:12px;align-items:baseline;margin-bottom:8px">
-            <span style="font-family:var(--mono);font-size:11px;letter-spacing:.09em;color:var(--ink2)">I</span>
-            <span style="font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase">The world</span>
+        <div class="contents-group">
+          <div class="contents-title">
+            <span class="numeral">I</span>
+            <span class="name">The world</span>
           </div>
           
-            <div style="display:flex;align-items:baseline;gap:8px;padding:2px 0 2px 34px">
-              <span style="text-wrap:pretty">Entries for people, places, factions, languages, calendars, events, artifacts, ideas</span>
-              <span style="flex:1 0 24px;border-bottom:1px dotted var(--rule2);transform:translateY(-4px)"></span>
-              <span style="font-family:var(--mono);font-size:11px;color:var(--ink2);min-width:1.5em;text-align:right">1</span>
+            <div class="entry">
+              <span class="pretty">Entries for people, places, factions, languages, calendars, events, artifacts, ideas</span>
+              <span class="dots"></span>
+              <span class="page">1</span>
             </div>
           
-            <div style="display:flex;align-items:baseline;gap:8px;padding:2px 0 2px 34px">
-              <span style="text-wrap:pretty">Links made by typing a name; every entry lists what links to it</span>
-              <span style="flex:1 0 24px;border-bottom:1px dotted var(--rule2);transform:translateY(-4px)"></span>
-              <span style="font-family:var(--mono);font-size:11px;color:var(--ink2);min-width:1.5em;text-align:right">1</span>
+            <div class="entry">
+              <span class="pretty">Links made by typing a name; every entry lists what links to it</span>
+              <span class="dots"></span>
+              <span class="page">1</span>
             </div>
           
-            <div style="display:flex;align-items:baseline;gap:8px;padding:2px 0 2px 34px">
-              <span style="text-wrap:pretty">Your own forms and categories, beside the built-in ones</span>
-              <span style="flex:1 0 24px;border-bottom:1px dotted var(--rule2);transform:translateY(-4px)"></span>
-              <span style="font-family:var(--mono);font-size:11px;color:var(--ink2);min-width:1.5em;text-align:right"></span>
+            <div class="entry">
+              <span class="pretty">Your own forms and categories, beside the built-in ones</span>
+              <span class="dots"></span>
+              <span class="page"></span>
             </div>
           
-            <div style="display:flex;align-items:baseline;gap:8px;padding:2px 0 2px 34px">
-              <span style="text-wrap:pretty">Family trees, for people and for species and cultures</span>
-              <span style="flex:1 0 24px;border-bottom:1px dotted var(--rule2);transform:translateY(-4px)"></span>
-              <span style="font-family:var(--mono);font-size:11px;color:var(--ink2);min-width:1.5em;text-align:right"></span>
+            <div class="entry">
+              <span class="pretty">Family trees, for people and for species and cultures</span>
+              <span class="dots"></span>
+              <span class="page"></span>
             </div>
           
-            <div style="display:flex;align-items:baseline;gap:8px;padding:2px 0 2px 34px">
-              <span style="text-wrap:pretty">Languages with a lexicon, dialects that inherit, and a name generator that follows each language’s patterns</span>
-              <span style="flex:1 0 24px;border-bottom:1px dotted var(--rule2);transform:translateY(-4px)"></span>
-              <span style="font-family:var(--mono);font-size:11px;color:var(--ink2);min-width:1.5em;text-align:right"></span>
+            <div class="entry">
+              <span class="pretty">Languages with a lexicon, dialects that inherit, and a name generator that follows each language’s patterns</span>
+              <span class="dots"></span>
+              <span class="page"></span>
             </div>
           
         </div>
       
-        <div style="break-inside:avoid;margin-bottom:26px">
-          <div style="display:flex;gap:12px;align-items:baseline;margin-bottom:8px">
-            <span style="font-family:var(--mono);font-size:11px;letter-spacing:.09em;color:var(--ink2)">II</span>
-            <span style="font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase">Time</span>
+        <div class="contents-group">
+          <div class="contents-title">
+            <span class="numeral">II</span>
+            <span class="name">Time</span>
           </div>
           
-            <div style="display:flex;align-items:baseline;gap:8px;padding:2px 0 2px 34px">
-              <span style="text-wrap:pretty">Calendars with their own months and eras</span>
-              <span style="flex:1 0 24px;border-bottom:1px dotted var(--rule2);transform:translateY(-4px)"></span>
-              <span style="font-family:var(--mono);font-size:11px;color:var(--ink2);min-width:1.5em;text-align:right">2</span>
+            <div class="entry">
+              <span class="pretty">Calendars with their own months and eras</span>
+              <span class="dots"></span>
+              <span class="page">2</span>
             </div>
           
-            <div style="display:flex;align-items:baseline;gap:8px;padding:2px 0 2px 34px">
-              <span style="text-wrap:pretty">Relative dates: “ten years after the Fall”</span>
-              <span style="flex:1 0 24px;border-bottom:1px dotted var(--rule2);transform:translateY(-4px)"></span>
-              <span style="font-family:var(--mono);font-size:11px;color:var(--ink2);min-width:1.5em;text-align:right">2</span>
+            <div class="entry">
+              <span class="pretty">Relative dates: “ten years after the Fall”</span>
+              <span class="dots"></span>
+              <span class="page">2</span>
             </div>
           
-            <div style="display:flex;align-items:baseline;gap:8px;padding:2px 0 2px 34px">
-              <span style="text-wrap:pretty">A chronology that draws every calendar on one axis</span>
-              <span style="flex:1 0 24px;border-bottom:1px dotted var(--rule2);transform:translateY(-4px)"></span>
-              <span style="font-family:var(--mono);font-size:11px;color:var(--ink2);min-width:1.5em;text-align:right">2</span>
+            <div class="entry">
+              <span class="pretty">A chronology that draws every calendar on one axis</span>
+              <span class="dots"></span>
+              <span class="page">2</span>
             </div>
           
         </div>
       
-        <div style="break-inside:avoid;margin-bottom:26px">
-          <div style="display:flex;gap:12px;align-items:baseline;margin-bottom:8px">
-            <span style="font-family:var(--mono);font-size:11px;letter-spacing:.09em;color:var(--ink2)">III</span>
-            <span style="font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase">Place</span>
+        <div class="contents-group">
+          <div class="contents-title">
+            <span class="numeral">III</span>
+            <span class="name">Place</span>
           </div>
           
-            <div style="display:flex;align-items:baseline;gap:8px;padding:2px 0 2px 34px">
-              <span style="text-wrap:pretty">Maps from your own images: pins, regions, routes</span>
-              <span style="flex:1 0 24px;border-bottom:1px dotted var(--rule2);transform:translateY(-4px)"></span>
-              <span style="font-family:var(--mono);font-size:11px;color:var(--ink2);min-width:1.5em;text-align:right">3</span>
+            <div class="entry">
+              <span class="pretty">Maps from your own images: pins, regions, routes</span>
+              <span class="dots"></span>
+              <span class="page">3</span>
             </div>
           
-            <div style="display:flex;align-items:baseline;gap:8px;padding:2px 0 2px 34px">
-              <span style="text-wrap:pretty">Era layers, and sub-maps cut from a parent map</span>
-              <span style="flex:1 0 24px;border-bottom:1px dotted var(--rule2);transform:translateY(-4px)"></span>
-              <span style="font-family:var(--mono);font-size:11px;color:var(--ink2);min-width:1.5em;text-align:right">3</span>
+            <div class="entry">
+              <span class="pretty">Era layers, and sub-maps cut from a parent map</span>
+              <span class="dots"></span>
+              <span class="page">3</span>
             </div>
           
-            <div style="display:flex;align-items:baseline;gap:8px;padding:2px 0 2px 34px">
-              <span style="text-wrap:pretty">A terrain generator, for when you have no map yet</span>
-              <span style="flex:1 0 24px;border-bottom:1px dotted var(--rule2);transform:translateY(-4px)"></span>
-              <span style="font-family:var(--mono);font-size:11px;color:var(--ink2);min-width:1.5em;text-align:right">3</span>
+            <div class="entry">
+              <span class="pretty">A terrain generator, for when you have no map yet</span>
+              <span class="dots"></span>
+              <span class="page">3</span>
             </div>
           
         </div>
       
-        <div style="break-inside:avoid;margin-bottom:26px">
-          <div style="display:flex;gap:12px;align-items:baseline;margin-bottom:8px">
-            <span style="font-family:var(--mono);font-size:11px;letter-spacing:.09em;color:var(--ink2)">IV</span>
-            <span style="font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase">The book</span>
+        <div class="contents-group">
+          <div class="contents-title">
+            <span class="numeral">IV</span>
+            <span class="name">The book</span>
           </div>
           
-            <div style="display:flex;align-items:baseline;gap:8px;padding:2px 0 2px 34px">
-              <span style="text-wrap:pretty">A full-screen writer with a word tally for the session</span>
-              <span style="flex:1 0 24px;border-bottom:1px dotted var(--rule2);transform:translateY(-4px)"></span>
-              <span style="font-family:var(--mono);font-size:11px;color:var(--ink2);min-width:1.5em;text-align:right">4</span>
+            <div class="entry">
+              <span class="pretty">A full-screen writer with a word tally for the session</span>
+              <span class="dots"></span>
+              <span class="page">4</span>
             </div>
           
-            <div style="display:flex;align-items:baseline;gap:8px;padding:2px 0 2px 34px">
-              <span style="text-wrap:pretty">Author notes between %% that never count and never export unless you ask</span>
-              <span style="flex:1 0 24px;border-bottom:1px dotted var(--rule2);transform:translateY(-4px)"></span>
-              <span style="font-family:var(--mono);font-size:11px;color:var(--ink2);min-width:1.5em;text-align:right">4</span>
+            <div class="entry">
+              <span class="pretty">Author notes between %% that never count and never export unless you ask</span>
+              <span class="dots"></span>
+              <span class="page">4</span>
             </div>
           
-            <div style="display:flex;align-items:baseline;gap:8px;padding:2px 0 2px 34px">
-              <span style="text-wrap:pretty">Chapters that number themselves</span>
-              <span style="flex:1 0 24px;border-bottom:1px dotted var(--rule2);transform:translateY(-4px)"></span>
-              <span style="font-family:var(--mono);font-size:11px;color:var(--ink2);min-width:1.5em;text-align:right">4</span>
+            <div class="entry">
+              <span class="pretty">Chapters that number themselves</span>
+              <span class="dots"></span>
+              <span class="page">4</span>
             </div>
           
-            <div style="display:flex;align-items:baseline;gap:8px;padding:2px 0 2px 34px">
-              <span style="text-wrap:pretty">Export to Word with real headings, or to Markdown</span>
-              <span style="flex:1 0 24px;border-bottom:1px dotted var(--rule2);transform:translateY(-4px)"></span>
-              <span style="font-family:var(--mono);font-size:11px;color:var(--ink2);min-width:1.5em;text-align:right">4</span>
+            <div class="entry">
+              <span class="pretty">Export to Word with real headings, or to Markdown</span>
+              <span class="dots"></span>
+              <span class="page">4</span>
             </div>
           
-            <div style="display:flex;align-items:baseline;gap:8px;padding:2px 0 2px 34px">
-              <span style="text-wrap:pretty">Two windows: the chapter in one, the world in the other</span>
-              <span style="flex:1 0 24px;border-bottom:1px dotted var(--rule2);transform:translateY(-4px)"></span>
-              <span style="font-family:var(--mono);font-size:11px;color:var(--ink2);min-width:1.5em;text-align:right">4</span>
+            <div class="entry">
+              <span class="pretty">Two windows: the chapter in one, the world in the other</span>
+              <span class="dots"></span>
+              <span class="page">4</span>
             </div>
           
         </div>
       
-        <div style="break-inside:avoid;margin-bottom:26px">
-          <div style="display:flex;gap:12px;align-items:baseline;margin-bottom:8px">
-            <span style="font-family:var(--mono);font-size:11px;letter-spacing:.09em;color:var(--ink2)">V</span>
-            <span style="font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase">Keeping it in order</span>
+        <div class="contents-group">
+          <div class="contents-title">
+            <span class="numeral">V</span>
+            <span class="name">Keeping it in order</span>
           </div>
           
-            <div style="display:flex;align-items:baseline;gap:8px;padding:2px 0 2px 34px">
-              <span style="text-wrap:pretty">Focus mode: narrow everything to one book, one tag, one query</span>
-              <span style="flex:1 0 24px;border-bottom:1px dotted var(--rule2);transform:translateY(-4px)"></span>
-              <span style="font-family:var(--mono);font-size:11px;color:var(--ink2);min-width:1.5em;text-align:right"></span>
+            <div class="entry">
+              <span class="pretty">Focus mode: narrow everything to one book, one tag, one query</span>
+              <span class="dots"></span>
+              <span class="page"></span>
             </div>
           
-            <div style="display:flex;align-items:baseline;gap:8px;padding:2px 0 2px 34px">
-              <span style="text-wrap:pretty">A query builder, with bulk edit on the results</span>
-              <span style="flex:1 0 24px;border-bottom:1px dotted var(--rule2);transform:translateY(-4px)"></span>
-              <span style="font-family:var(--mono);font-size:11px;color:var(--ink2);min-width:1.5em;text-align:right"></span>
+            <div class="entry">
+              <span class="pretty">A query builder, with bulk edit on the results</span>
+              <span class="dots"></span>
+              <span class="page"></span>
             </div>
           
-            <div style="display:flex;align-items:baseline;gap:8px;padding:2px 0 2px 34px">
-              <span style="text-wrap:pretty">CSV import with a template per form; CSV export back out</span>
-              <span style="flex:1 0 24px;border-bottom:1px dotted var(--rule2);transform:translateY(-4px)"></span>
-              <span style="font-family:var(--mono);font-size:11px;color:var(--ink2);min-width:1.5em;text-align:right"></span>
+            <div class="entry">
+              <span class="pretty">CSV import with a template per form; CSV export back out</span>
+              <span class="dots"></span>
+              <span class="page"></span>
             </div>
           
-            <div style="display:flex;align-items:baseline;gap:8px;padding:2px 0 2px 34px">
-              <span style="text-wrap:pretty">World Health: broken links, orphaned entries, dates that don’t resolve</span>
-              <span style="flex:1 0 24px;border-bottom:1px dotted var(--rule2);transform:translateY(-4px)"></span>
-              <span style="font-family:var(--mono);font-size:11px;color:var(--ink2);min-width:1.5em;text-align:right"></span>
+            <div class="entry">
+              <span class="pretty">World Health: broken links, orphaned entries, dates that don’t resolve</span>
+              <span class="dots"></span>
+              <span class="page"></span>
             </div>
           
-            <div style="display:flex;align-items:baseline;gap:8px;padding:2px 0 2px 34px">
-              <span style="text-wrap:pretty">Version history on every entry; rotating backups; JSON and Markdown export</span>
-              <span style="flex:1 0 24px;border-bottom:1px dotted var(--rule2);transform:translateY(-4px)"></span>
-              <span style="font-family:var(--mono);font-size:11px;color:var(--ink2);min-width:1.5em;text-align:right"></span>
+            <div class="entry">
+              <span class="pretty">Version history on every entry; rotating backups; JSON and Markdown export</span>
+              <span class="dots"></span>
+              <span class="page"></span>
             </div>
           
         </div>
       
-        <div style="break-inside:avoid;margin-bottom:26px">
-          <div style="display:flex;gap:12px;align-items:baseline;margin-bottom:8px">
-            <span style="font-family:var(--mono);font-size:11px;letter-spacing:.09em;color:var(--ink2)">VI</span>
-            <span style="font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase">Small comforts</span>
+        <div class="contents-group">
+          <div class="contents-title">
+            <span class="numeral">VI</span>
+            <span class="name">Small comforts</span>
           </div>
           
-            <div style="display:flex;align-items:baseline;gap:8px;padding:2px 0 2px 34px">
-              <span style="text-wrap:pretty">Four themes: night, parchment, verdant, ember</span>
-              <span style="flex:1 0 24px;border-bottom:1px dotted var(--rule2);transform:translateY(-4px)"></span>
-              <span style="font-family:var(--mono);font-size:11px;color:var(--ink2);min-width:1.5em;text-align:right"></span>
+            <div class="entry">
+              <span class="pretty">Four themes: night, parchment, verdant, ember</span>
+              <span class="dots"></span>
+              <span class="page"></span>
             </div>
           
-            <div style="display:flex;align-items:baseline;gap:8px;padding:2px 0 2px 34px">
-              <span style="text-wrap:pretty">A sample world on first launch, so the shelves aren’t bare</span>
-              <span style="flex:1 0 24px;border-bottom:1px dotted var(--rule2);transform:translateY(-4px)"></span>
-              <span style="font-family:var(--mono);font-size:11px;color:var(--ink2);min-width:1.5em;text-align:right"></span>
+            <div class="entry">
+              <span class="pretty">A sample world on first launch, so the shelves aren’t bare</span>
+              <span class="dots"></span>
+              <span class="page"></span>
             </div>
           
         </div>
@@ -408,62 +409,62 @@ document.addEventListener('DOMContentLoaded',function(){mark();document.querySel
     </div>
   </section>
 
-  <section id="get" style="margin-top:112px;padding-left:clamp(0px,9vw,150px)">
-    <div style="display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink);background:var(--bg2);border:1px solid var(--rule);padding:3px 8px 2px;margin-bottom:14px;transform:rotate(-0.4deg)">Getting a copy</div>
-    <div style="display:flex;flex-wrap:wrap;gap:10px 44px;align-items:flex-start">
-      <div style="flex:1 1 30rem;max-width:36rem;display:flex;flex-direction:column;gap:24px">
-        <p style="margin:0;font-family:var(--body);font-size:var(--body-size);line-height:1.6;text-wrap:pretty">Otto is free while it is in beta: the whole program, with the sample world in it. When it is finished it will cost money, paid once, and the people who tested the beta will hear first.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center">
-          <a href="download.html" style="display:inline-flex;align-items:center;gap:10px;padding:13px 20px;background:var(--acc);color:var(--bg);text-decoration:none;font-family:var(--display);font-weight:500;font-size:16px;border-radius:2px">Download the beta for Windows</a>
+  <section id="get" class="inset gap-112">
+    <div class="stamp inline" style="--tilt:-0.4deg">Getting a copy</div>
+    <div class="row">
+      <div class="col-narrow">
+        <p class="plain">Otto is free while it is in beta: the whole program, with the sample world in it. When it is finished it will cost money, paid once, and the people who tested the beta will hear first.</p>
+        <div class="actions">
+          <a href="download.html" class="button">Download the beta for Windows</a>
         </div>
       </div>
-      <aside style="flex:0 1 12rem;padding-top:15px;margin-left:-4px;font-family:var(--mono);font-size:11.5px;line-height:1.6;color:var(--ink2);transform:rotate(0.6deg);transform-origin:left top"><span style="margin-right:6px">←</span>Mac is next. I’d rather it be late than be a Windows program wearing a disguise.</aside>
+      <aside style="--lift:15px;--shift:-4px;--tilt:0.6deg"><span class="arrow">←</span>Mac is next. I’d rather it be late than be a Windows program wearing a disguise.</aside>
     </div>
   </section>
 
-  <section id="changes" style="margin-top:112px;padding-left:clamp(0px,9vw,150px);margin-bottom:120px">
-    <div style="display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink);background:var(--bg2);border:1px solid var(--rule);padding:3px 8px 2px;margin-bottom:14px;transform:rotate(0.9deg)">Lately</div>
-    <h2 style="margin:0 0 28px;font-family:var(--display);font-weight:500;font-size:24px;letter-spacing:0">From the changelog</h2>
-    <div style="max-width:48rem;display:flex;flex-direction:column;border-top:1px solid var(--rule2)">
-        <div style="display:flex;flex-wrap:wrap;gap:8px 32px;padding:18px 0;border-bottom:1px solid var(--rule)">
-          <div style="flex:0 0 9.5rem;display:flex;flex-direction:column;gap:4px;font-family:var(--mono);font-size:11.5px;letter-spacing:.04em">
+  <section id="changes" class="inset gap-112 end-120">
+    <div class="stamp inline" style="--tilt:0.9deg">Lately</div>
+    <h2 class="heading">From the changelog</h2>
+    <div class="releases">
+        <div class="release">
+          <div class="when">
             <span>on the way</span>
-            <span style="color:var(--ink2)">26 Oct 2026</span>
+            <span class="muted">26 Oct 2026</span>
           </div>
-          <ul style="flex:1 1 24rem;margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-family:var(--body);font-size:16.5px;line-height:1.5"><li style="display:flex;gap:12px"><span style="color:var(--ink2);flex:none">–</span><span style="text-wrap:pretty">Writing in two windows: Ctrl-click a chapter and it opens in writer mode in a second window; the world stays in the first.</span></li><li style="display:flex;gap:12px"><span style="color:var(--ink2);flex:none">–</span><span style="text-wrap:pretty">Rest the pointer on a name while writing and a card shows who it is.</span></li><li style="display:flex;gap:12px"><span style="color:var(--ink2);flex:none">–</span><span style="text-wrap:pretty">CSV import rebuilt for the current forms, with a template per form and a Belongs-to-project column; export query results back to CSV.</span></li></ul>
+          <ul><li><span class="dash">–</span><span class="pretty">Writing in two windows: Ctrl-click a chapter and it opens in writer mode in a second window; the world stays in the first.</span></li><li><span class="dash">–</span><span class="pretty">Rest the pointer on a name while writing and a card shows who it is.</span></li><li><span class="dash">–</span><span class="pretty">CSV import rebuilt for the current forms, with a template per form and a Belongs-to-project column; export query results back to CSV.</span></li></ul>
         </div>
-        <div style="display:flex;flex-wrap:wrap;gap:8px 32px;padding:18px 0;border-bottom:1px solid var(--rule)">
-          <div style="flex:0 0 9.5rem;display:flex;flex-direction:column;gap:4px;font-family:var(--mono);font-size:11.5px;letter-spacing:.04em">
+        <div class="release">
+          <div class="when">
             <span>0.3.1</span>
-            <span style="color:var(--ink2)">29 Sep 2026</span>
+            <span class="muted">29 Sep 2026</span>
           </div>
-          <ul style="flex:1 1 24rem;margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-family:var(--body);font-size:16.5px;line-height:1.5"><li style="display:flex;gap:12px"><span style="color:var(--ink2);flex:none">–</span><span style="text-wrap:pretty">Nine new launch illustrations; the toolbar names the entry you’re on.</span></li><li style="display:flex;gap:12px"><span style="color:var(--ink2);flex:none">–</span><span style="text-wrap:pretty">Notes kept with a project are listed under their book in the sidebar.</span></li><li style="display:flex;gap:12px"><span style="color:var(--ink2);flex:none">–</span><span style="text-wrap:pretty">Foundational Lore on every Place, Artifact and Concept form.</span></li></ul>
+          <ul><li><span class="dash">–</span><span class="pretty">Nine new launch illustrations; the toolbar names the entry you’re on.</span></li><li><span class="dash">–</span><span class="pretty">Notes kept with a project are listed under their book in the sidebar.</span></li><li><span class="dash">–</span><span class="pretty">Foundational Lore on every Place, Artifact and Concept form.</span></li></ul>
         </div>
-        <div style="display:flex;flex-wrap:wrap;gap:8px 32px;padding:18px 0;border-bottom:1px solid var(--rule)">
-          <div style="flex:0 0 9.5rem;display:flex;flex-direction:column;gap:4px;font-family:var(--mono);font-size:11.5px;letter-spacing:.04em">
+        <div class="release">
+          <div class="when">
             <span>0.3.0</span>
-            <span style="color:var(--ink2)">17 Sep 2026</span>
+            <span class="muted">17 Sep 2026</span>
           </div>
-          <ul style="flex:1 1 24rem;margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-family:var(--body);font-size:16.5px;line-height:1.5"><li style="display:flex;gap:12px"><span style="color:var(--ink2);flex:none">–</span><span style="text-wrap:pretty">Project is one form: the kind of unit (series, novel, chapter, scene) is its category.</span></li><li style="display:flex;gap:12px"><span style="color:var(--ink2);flex:none">–</span><span style="text-wrap:pretty">Story arcs and beats, with Realized In linking a beat to the chapter that carries it.</span></li><li style="display:flex;gap:12px"><span style="color:var(--ink2);flex:none">–</span><span style="text-wrap:pretty">Notes kept with a chapter, listed under it.</span></li></ul>
+          <ul><li><span class="dash">–</span><span class="pretty">Project is one form: the kind of unit (series, novel, chapter, scene) is its category.</span></li><li><span class="dash">–</span><span class="pretty">Story arcs and beats, with Realized In linking a beat to the chapter that carries it.</span></li><li><span class="dash">–</span><span class="pretty">Notes kept with a chapter, listed under it.</span></li></ul>
         </div>
     </div>
-    <p style="margin:18px 0 0;font-family:var(--mono);font-size:11.5px;color:var(--ink2)"><a href="changelog.html">Every release, back to the first</a>.</p>
+    <p class="mono" style="margin:18px 0 0"><a href="changelog.html">Every release, back to the first</a>.</p>
   </section>
 </main>
 
 
-<footer style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,5vw,56px) 56px;box-sizing:border-box">
-  <div style="border-top:1px dashed var(--rule2);padding-top:28px;display:flex;flex-wrap:wrap;gap:28px 56px;align-items:flex-start">
-    <div style="display:flex;gap:14px;align-items:flex-start;flex:1 1 26rem;max-width:34rem">
-      <img src="assets/night/otto-glyph.svg" alt="" width="26" height="26" style="display:var(--on-night);flex:none;margin-top:2px">
-      <img src="assets/parch/otto-glyph.svg" alt="" width="26" height="26" style="display:var(--on-parch);flex:none;margin-top:2px">
-      <p style="margin:0;font-family:var(--body);font-size:15px;line-height:1.55;color:var(--ink2);text-wrap:pretty">Otto is made by one person. This site is set in Fraunces, EB Garamond and Courier Prime, and is a handful of plain pages with nothing hidden in them.</p>
+<footer class="wrap bottom">
+  <div class="colophon">
+    <div class="colophon-note">
+      <img src="assets/night/otto-glyph.svg" alt="" width="26" height="26" class="on-night">
+      <img src="assets/parch/otto-glyph.svg" alt="" width="26" height="26" class="on-parch">
+      <p>Otto is made by one person. This site is set in Fraunces, EB Garamond and Courier Prime, and is a handful of plain pages with nothing hidden in them.</p>
     </div>
-    <div style="display:flex;flex-wrap:wrap;gap:8px 20px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2)">
-      <a href="how-it-works.html" style="text-decoration:none">How it works</a>
-      <a href="download.html" style="text-decoration:none">Download</a>
-      <a href="about.html" style="text-decoration:none">About</a>
-      <a href="mailto:hello@example.com" style="text-decoration:none">Write to me</a>
+    <div class="footer-links">
+      <a href="how-it-works.html">How it works</a>
+      <a href="download.html">Download</a>
+      <a href="about.html">About</a>
+      <a href="mailto:hello@example.com">Write to me</a>
       <span>© 2026</span>
     </div>
   </div>

@@ -1,0 +1,158 @@
+/* Otto — the site's stylesheet.
+   Every page links fonts.css and then this file. The page's own <style>
+   block holds only the colour variables for the two grounds.
+
+   Writing a page: inside a .row, a bare <p> is a body paragraph and a
+   bare <aside> is a margin note. A section's pieces, in the order they
+   appear on every page:
+
+     <div class="stamp">Section name</div>         the little tilted label
+     <h2 class="heading">The sentence.</h2>          the section heading
+     <div class="row">                              one paragraph + one note
+       <p>Body text.</p>
+       <aside><span class="arrow">←</span>A pencil note in the margin.</aside>
+     </div>
+
+   The letter's column is class="letter col" and its paragraphs indent
+   themselves. Small per-element variations (a note's tilt, a column's gap) ride on
+   custom properties: style="--tilt:0.7deg". Each rule declares its own
+   default, so a value set on one element never leaks into the ones inside it.                            */
+
+/* ---- page frame ------------------------------------------------------ */
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(20px,5vw,56px);box-sizing:border-box}
+.wrap.top{padding-top:22px}              /* the header */
+.wrap.page{padding-top:64px}             /* a page's main column */
+.wrap.bottom{padding-bottom:56px}        /* the footer */
+.inset{padding-left:clamp(0px,9vw,150px)}  /* the reading column, stepped in from the left */
+.inset-less{padding-left:clamp(0px,4vw,64px)}
+.rel{position:relative}
+.clip{overflow-x:clip;min-height:100vh}
+
+/* ---- header and footer ---------------------------------------------- */
+.masthead{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 32px;padding-bottom:16px;border-bottom:1px dashed var(--rule2)}
+.lockup{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink)}
+.wordmark{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:26px;letter-spacing:-0.04em;line-height:1}
+.tagline{font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2);padding-left:12px;margin-left:2px;border-left:1px solid var(--rule2);line-height:1.35;max-width:15em}
+.menu{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase}
+.menu a,.footer-links a,.quiet-link{text-decoration:none}
+.menu .here{color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:2px}
+.ground{display:flex;align-items:center;gap:8px;padding-left:18px;border-left:1px solid var(--rule2);color:var(--ink2)}
+.ground button{all:unset;cursor:pointer;color:var(--acc)}
+.on-night{display:var(--on-night)}
+.on-parch{display:var(--on-parch)}
+.colophon{border-top:1px dashed var(--rule2);padding-top:28px;display:flex;flex-wrap:wrap;gap:28px 56px;align-items:flex-start}
+.colophon-note{display:flex;gap:14px;align-items:flex-start;flex:1 1 26rem;max-width:34rem}
+.colophon-note img{flex:none;margin-top:2px}
+.colophon-note p{margin:0;font-family:var(--body);font-size:15px;line-height:1.55;color:var(--ink2);text-wrap:pretty}
+.footer-links{display:flex;flex-wrap:wrap;gap:8px 20px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2)}
+
+/* ---- type ------------------------------------------------------------ */
+.label{font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2)}
+.label.dark{color:inherit}
+.kicker{margin-bottom:22px}                       /* the label above the title */
+.lead-in{margin-top:64px;margin-bottom:18px}      /* the label that opens the letter */
+.mono{font-family:var(--mono);font-size:11.5px;color:var(--ink2)}
+.muted{color:var(--ink2)}
+.title{margin:0;max-width:clamp(17rem,50vw,19em);font-family:var(--display);font-weight:500;font-size:clamp(26px,2.6vw,35px);line-height:1.22;letter-spacing:-0.005em;text-wrap:pretty}
+.title.narrow{max-width:clamp(17rem,50vw,18em);margin-bottom:36px}
+.title.wide{max-width:20em;margin-bottom:28px}
+.title.loose{max-width:none;text-wrap:initial}
+.heading{margin:0 0 28px;font-family:var(--display);font-weight:500;font-size:24px;letter-spacing:0}
+.heading.flush{margin:0}
+.heading.roomy{margin:0 0 40px;max-width:36rem;text-wrap:pretty}
+.heading.small{margin:0;font-size:20px}
+.subheading{margin:0;max-width:36rem;display:flex;gap:14px;align-items:baseline;font-family:var(--display);font-weight:500;font-size:19px;letter-spacing:0}
+.subheading .num{font-family:var(--mono);font-size:12px;color:var(--ink2);font-weight:400}
+.stamp{--tilt:0deg;display:table;font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink);background:var(--bg2);border:1px solid var(--rule);padding:3px 8px 2px;margin-bottom:14px;transform:rotate(var(--tilt))}
+.stamp.above-title{margin-bottom:26px}
+.stamp.inline{display:inline-block}
+.pretty{text-wrap:pretty}
+
+/* ---- the reading column --------------------------------------------- */
+.row{display:flex;flex-wrap:wrap;gap:10px 44px;align-items:flex-start}
+.row>p,p.prose{flex:1 1 30rem;max-width:36rem;margin:0;font-family:var(--body);font-size:var(--body-size);line-height:1.6;text-wrap:pretty}
+.letter .row>p{text-indent:1.6em}
+.letter .row:first-of-type>p:first-child{text-indent:0}
+p.plain{margin:0;font-family:var(--body);font-size:var(--body-size);line-height:1.6;text-wrap:pretty}
+p.aside-italic{margin:56px 0 0;max-width:36rem;font-family:var(--body);font-size:var(--body-size);line-height:1.6;font-style:italic;text-wrap:pretty}
+.dear{margin:0 0 10px;max-width:36rem;font-family:var(--body);font-size:var(--body-size);line-height:1.6;font-style:italic}
+.row>aside{--lift:8px;--shift:0px;--tilt:0deg;flex:0 1 12rem;font-family:var(--mono);font-size:11.5px;line-height:1.6;color:var(--ink2);padding-top:var(--lift);margin-left:var(--shift);transform:rotate(var(--tilt));transform-origin:left top}
+.row>aside:empty{padding:0;margin:0;transform:none}
+.arrow{margin-right:6px}
+.signature{max-width:36rem;display:flex;flex-direction:column;gap:4px;margin-top:22px;padding-left:9rem}
+.signature .name{font-family:var(--body);font-size:calc(var(--body-size) * 1.15);font-style:italic}
+.col{--gap:12px;display:flex;flex-direction:column;gap:var(--gap)}
+.col-narrow{--gap:24px;flex:1 1 30rem;max-width:36rem;display:flex;flex-direction:column;gap:var(--gap)}
+.col-side{--gap:20px;flex:1 1 22rem;max-width:34rem;display:flex;flex-direction:column;gap:var(--gap)}
+.col-side>p{margin:0;font-family:var(--body);font-size:var(--body-size);line-height:1.6;text-wrap:pretty}
+.code{font-family:var(--mono);font-size:.85em}
+sup.fn{font-family:var(--mono);font-size:11px;line-height:0}
+sup.fn a{text-decoration:none;padding:0 1px}
+.footnotes{list-style:none;margin:48px 0 0;padding:18px 0 0;max-width:36rem;border-top:1px solid var(--rule2);display:flex;flex-direction:column;gap:10px;font-family:var(--body);font-size:15px;line-height:1.5;color:var(--ink2)}
+.footnotes li{display:flex;gap:12px}
+.footnotes .num{font-family:var(--mono);font-size:11px;padding-top:3px;flex:none}
+.footnotes a{text-decoration:none}
+
+/* ---- pictures -------------------------------------------------------- */
+.frame{--tilt:0deg;position:relative;padding:6px;border:1px solid var(--rule2);background:var(--bg2);transform:rotate(var(--tilt))}
+.frame.thick{padding:7px}
+.frame.half{flex:1 1 30rem;max-width:36rem}
+.frame.actual{flex:0 1 560px;max-width:100%;box-sizing:border-box;margin-left:-18px}
+.frame img,.shot{display:block;width:100%;height:auto;aspect-ratio:1440/900;border:1px solid var(--rule)}
+.frame img.small,.shot.small{aspect-ratio:560/360}
+.tape{--tilt:0deg;position:absolute;top:-9px;left:22px;width:72px;height:20px;background:var(--rule);opacity:.9;transform:rotate(var(--tilt))}
+.tape.right{left:auto;right:22px}
+.tape.far{left:40px;width:84px}
+.tape.far.right{left:auto;right:40px}
+figure{margin:0}
+figure.beside{margin:0;display:flex;flex-wrap:wrap;gap:12px 44px;align-items:flex-end}
+figure.beside.top{align-items:flex-start}
+figure.beside.after{margin-top:36px}
+figure.beside.before{margin-bottom:32px}
+figure.column{margin:0 0 0 -14px;flex:0 1 560px;max-width:100%;display:flex;flex-direction:column;gap:12px}
+figcaption.under{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:12px;padding-left:clamp(0px,9vw,150px);max-width:44rem}
+figcaption.under .label{padding-top:3px}
+figcaption.under .caption{flex:1 1 20rem}
+figcaption.side{flex:0 1 12rem;display:flex;flex-direction:column;gap:6px}
+figcaption.side.wider{flex-basis:14rem;padding-top:4px}
+figcaption.inline{display:flex;gap:14px}
+figcaption.inline .label{padding-top:3px;flex:none}
+.caption{font-family:var(--body);font-size:16px;line-height:1.5;text-wrap:pretty}
+.rule{width:min(36rem,100%);height:auto;opacity:.8}
+.rule.faint{opacity:.75}
+.splash{position:absolute;pointer-events:none}
+
+/* ---- lists and tables ----------------------------------------------- */
+.contents{columns:2 24rem;column-gap:64px;font-family:var(--body);font-size:16px;line-height:1.5}
+.contents-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 24px;padding-bottom:12px;border-bottom:3px double var(--rule2);margin-bottom:28px}
+.contents-group{break-inside:avoid;margin-bottom:26px}
+.contents-title{display:flex;gap:12px;align-items:baseline;margin-bottom:8px}
+.contents-title .numeral{font-family:var(--mono);font-size:11px;letter-spacing:.09em;color:var(--ink2)}
+.contents-title .name{font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase}
+.entry{display:flex;align-items:baseline;gap:8px;padding:2px 0 2px 34px}
+.entry .dots{flex:1 0 24px;border-bottom:1px dotted var(--rule2);transform:translateY(-4px)}
+.entry .page{font-family:var(--mono);font-size:11px;color:var(--ink2);min-width:1.5em;text-align:right}
+.releases{max-width:48rem;display:flex;flex-direction:column;border-top:1px solid var(--rule2)}
+.release{display:flex;flex-wrap:wrap;gap:8px 32px;padding:18px 0;border-bottom:1px solid var(--rule)}
+.release.tall{padding:22px 0}
+.release .when{flex:0 0 9.5rem;display:flex;flex-direction:column;gap:4px;font-family:var(--mono);font-size:11.5px;letter-spacing:.04em}
+.release ul{flex:1 1 24rem;margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-family:var(--body);font-size:16.5px;line-height:1.5}
+.release.tall ul{max-width:36rem;display:block;font-size:17px}
+.release li{display:flex;gap:12px}
+.release.tall li{margin:0 0 8px}
+.release .dash{color:var(--ink2);flex:none}
+.numbered{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;font-family:var(--body);font-size:var(--body-size);line-height:1.5}
+.numbered li{display:flex;gap:18px;padding:10px 0;border-bottom:1px solid var(--rule)}
+.numbered .num{font-family:var(--mono);font-size:11px;color:var(--ink2);padding-top:6px;flex:none;width:1.6em}
+.head-line{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 20px;margin-bottom:20px}
+.boxed{max-width:44rem;padding-top:26px;border-top:3px double var(--rule2)}
+.jump{display:flex;flex-wrap:wrap;gap:6px 22px;font-family:var(--mono);font-size:11.5px;letter-spacing:.06em}
+.actions{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center}
+.button{display:inline-flex;align-items:center;gap:10px;padding:13px 20px;background:var(--acc);color:var(--bg);text-decoration:none;font-family:var(--display);font-weight:500;font-size:16px;border-radius:2px}
+.sections{--gap:56px;display:flex;flex-direction:column;gap:var(--gap)}
+
+/* ---- spacing between sections --------------------------------------- */
+.gap-32{margin-top:32px}.gap-48{margin-top:48px}.gap-64{margin-top:64px}.gap-72{margin-top:72px}.gap-80{margin-top:80px}
+.gap-88{margin-top:88px}.gap-96{margin-top:96px}.gap-104{margin-top:104px}.gap-112{margin-top:112px}.gap-120{margin-top:120px}
+.end-96{margin-bottom:96px}.end-112{margin-bottom:112px}.end-120{margin-bottom:120px}
+.below-26{margin-bottom:26px}.below-36{margin-bottom:36px}
