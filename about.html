@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded',function(){mark();document.querySel
 </head>
 <body>
 <div class="clip">
-
 <header class="wrap top">
   <div class="masthead">
     <a href="index.html" class="lockup">
@@ -52,7 +51,7 @@ document.addEventListener('DOMContentLoaded',function(){mark();document.querySel
       
         
         
-          <a href="index.html#changes">Changes</a>
+          <a href="changelog.html">Changes</a>
         
       
         
@@ -74,39 +73,121 @@ document.addEventListener('DOMContentLoaded',function(){mark();document.querySel
   <img src="assets/night/splash-lexicon.svg" alt="" style="display:var(--on-night);position:absolute;right:-20vw;top:20px;width:min(48vw,720px);opacity:.6;pointer-events:none">
   <img src="assets/parch/splash-lexicon.svg" alt="" style="display:var(--on-parch);position:absolute;right:-20vw;top:20px;width:min(48vw,720px);opacity:.6;pointer-events:none">
   <div class="inset rel">
-    <div class="stamp above-title" style="--tilt:0.6deg">About</div>
-    <h1 class="title narrow">Otto is made by one person, for people who write the way I do.</h1>
-    <div class="row">
-      <p>I’m [name]. I write [what you write], and I have been building the same invented world since [year]. By day I [day job, if you’d like to say], in [place]. Otto began as something I made for my own notes; when other writers asked whether they could have it, it became something I make for them as well. I read every message that comes in, and I answer most of them.</p>
-      <aside style="--lift:15px;--tilt:-1.2deg"><span class="arrow">←</span>The name: [why Otto is called Otto].</aside>
-    </div>
-
-    <div class="label" style="margin-top:88px;margin-bottom:10px">The three promises, and why</div>
-    <h2 class="heading roomy">Each of these costs me something to keep. Here is why I keep them.</h2>
-    <div class="col end-112" style="--gap:48px">
-      <div class="col">
-        <h3 class="subheading"><span class="num">i.</span>It runs on your machine and nowhere else.</h3>
+    <div class="stamp" style="--tilt:0.6deg">About Otto</div>
+    <h1 class="title narrow">How Otto came about, and what it promises.</h1>
+      <div class="label" style="margin-bottom:18px">A letter from Otto’s maker</div>
+      <div class="letter col" style="--gap:2px">
+        <p class="dear">Dear creator and writer,</p>
         <div class="row">
-          <p>A world takes years. The companies that keep things for you don’t always last years, and I didn’t want anyone’s decade of work to depend on whether mine does. A file on your own disk doesn’t need me to stay in business, or to be awake, or to agree with you. It also means I can’t see your world, which is how it should be: it’s unfinished, and it’s yours.</p>
-          <aside style="--lift:11px;--shift:10px;--tilt:0.7deg"><span class="arrow">←</span>The cost: no syncing between computers. Copy the file, or keep it in a folder you already sync.</aside>
+		  <p><b>Otto is software for creating, managing, and using fictional worlds.</b></p>
+		  <p>Let me first tell you how it came to be.</p>
+          <p>I can remember the exact moment when I started creating the universe in my head. I was at a birthday party for my cousin’s kid, and I looked at the mountains behind their house, and I had an idea for a story. That idea came to nothing in the end, but it led to another idea, and another and another, until there were so many that I was remaking the entire world, end to end.</p>
+		  <p>The problem was that universes and worlds are big, and so I needed a place to put everything. First I used text files (not great), then I used Word (worse). Then I tried to make a single PDF with lots of internal links (woof), and from there I transitioned to a maze of Google Drive folders (woof woof). Each time I made a move to a different way of organizing things, I lost big chunks of time.</p>
+		  <aside style="--lift:13px;--tilt:-1.2deg"><span class="arrow">←</span>“final_world_characters_v7_FINAL_test_FINAL.docx”</aside>
+		  <p>So I went looking for some software. There was some cool stuff, but honestly I hated a lot of what I found. The main reason is that basically everything worked on a subscription pricing model, which I and every other sane person hates. Plus a lot of the features just didn’t really work like I wanted them to work, and didn’t really integrate with each other and with the manuscript writing process, which was really important to me.</p>
+		  <aside style="--lift:13px;--tilt:-1.2deg"><span class="arrow">←</span>“$15? Nice. Oh wait you mean 15$ per MONTH”</aside>
+		  <p>That’s why I ended up building Otto. Otto is software for creating, managing, and using fictional worlds, made by someone—me—who is actively doing all those things. I made it first and foremost for <em>me</em>, but I designed it to help anyone create and search parts of their world quickly, and then put those parts to use in sketching storylines and writing manuscripts. And it all happens in a single app on your computer, so you don’t need to use anything else.</p>
+		  <p>It's actually really simple. You make an entry for a thing in your world, like a character, a place, a faction, a language, or a battle. Then you fill in information about that thing, and other entries are created automatically. For example, if you create a character, you can add information like that character's birthplace, their current home, their partner, their children, and so on. As you do all that, Otto creates new entries in your world for all of those things, <em>and</em> they are all linked to each other automatically.</p>
+		  <p>For me the bottleneck was never my imagination; it was always the system for organizing what I thought of. Otto tries to eliminate that bottleneck. The whole idea is to get you creating as fast and efficiently as possible.</p>
+        </div>
+        <div class="row">
+          <p>There are tons of other features that I think are really cool and I'd love to tell you about them, but the easiest way to check them out is to browse this website and watch the demo video. That will give you an idea of what Otto can do, and whether it might be right for you. (And be sure to look at the <a href="#promises">three promises</a> below.)</p>
+        </div>
+        <div class="row">
+          <p>If you have any feedback or questions I'd love to hear about them!</p>
+        </div>
+        <div class="signature">
+          <span class="name">Bryce</span>
+          <span class="label">October 2026</span>
+        </div>
+      </div>
+  </div>
+
+  <div class="inset gap-104">
+    <img src="assets/night/web-rule-a.svg" alt="" class="on-night rule">
+    <img src="assets/parch/web-rule-a.svg" alt="" class="on-parch rule">
+  </div>
+
+  <section id="promises" class="inset gap-72">
+    <div class="stamp inline" style="--tilt:0.6deg">Otto’s Three Promises</div>
+    <h2 class="heading roomy">I'm absolutely committed to all three of these things.</h2>
+
+    <div class="col" style="--gap:44px">
+      <div class="col">
+        <h3 class="subheading"><span class="num">i.</span>Otto runs on your computer, nowhere else, and doesn’t require an internet connection.</h3>
+        <div class="row">
+          <p>You don't have to make an account, and Otto doesn't send anything to nor interact with a server. It works on a train, a plane, with polychromatic eggs and ham, or with no wifi. Your whole world is a SQLite file<sup class="fn"><a href="#fn1" id="r1">1</a></sup> that you can copy, back up, or move to another computer.</p>
         </div>
       </div>
       <div class="col">
-        <h3 class="subheading"><span class="num">ii.</span>What you write stays yours.</h3>
+        <h3 class="subheading"><span class="num">ii.</span>Everything you create is owned by you, in a format that is readable and usable outside of Otto.</h3>
         <div class="row">
-          <p>A program that makes leaving hard is a program that doesn’t trust itself. If Otto is worth staying with, you’ll stay; the export is there so the choice is a real one. The backups before every update and the history on every entry are there because I have lost work to software, and I would rather spend disk space than spend your evenings.</p>
+          <p>All your data is stored on your computer. Whenever you feel like it, you can export everything as plain JSON or a set of Markdown files, which you can then view in Obsidian or some other editor. You can export manuscripts as Word or Markdown files too. Before each update, Otto makes a backup,<sup class="fn"><a href="#fn2" id="r2">2</a></sup> and every entry keeps its own version history, so previous drafts of chapters are still there. Everything gets backed up, and you can do the backups manually whenever you want.</p>
+          <aside style="--shift:4px;--tilt:-0.9deg"><span class="arrow">←</span>Markdown files are really just plain text files with some human-readable formatting. They will never be obsolete.</aside>
+        </div>
+      </div>
+      <div class="col">
+        <h3 class="subheading"><span class="num">iii.</span>What you pay for always works.</h3>
+        <div class="row">
+          <p>If you choose to purchase Otto, you’ll get the full version of the software. You’ll also get access to ongoing updates and new features. Down the road there will be a brand-new version of Otto with even <em>more</em> updates and new features. When that happens, and that will definitely not happen every year (no backdoor subscription model). You’ll then have the option to upgrade to that new version at a discounted price. If you choose not to, the version you have will continue to function just like it always has, and you’ll keep getting critical updates and bug fixes for free. </p>
           <aside></aside>
         </div>
       </div>
-      <div class="col">
-        <h3 class="subheading"><span class="num">iii.</span>The built-in kinds are fixed; what you add sits alongside.</h3>
-        <div class="row">
-          <p>I have had tools rename my categories in an update and quietly undo years of sorting. So Otto’s own kinds of thing are fixed, which stops me from ever “improving” them out from under you, and the forms and categories you make sit beside them, where no update can reach. Yours are only ever yours to change.</p>
-          <aside style="--lift:7px;--shift:-6px;--tilt:-0.5deg"><span class="arrow">←</span>The cost: I can’t redesign the built-in forms on a whim. Good.</aside>
-        </div>
+    </div>
+
+    <ol class="footnotes">
+      <li id="fn1"><span class="num">1</span><span class="pretty">SQLite is the database format inside most phones and web browsers. It is open, thoroughly documented, and the Library of Congress lists it among its recommended formats for keeping data. <a href="#r1">↩</a></span></li>
+      <li id="fn2"><span class="num">2</span><span class="pretty">Don’t worry, the auto-backups rotate and old ones get purged.<a href="#r2">↩</a></span></li>
+    </ol>
+  </section>
+
+  <section id="inside" class="gap-120 end-120">
+    <div class="contents-head">
+      <h2 class="heading flush">Otto’s features</h2>
+      <span class="label">check out <a href="how-it-works.html">How it works</a> for more</span>
+    </div>
+    <div class="features">
+      <div>
+        <h3><span class="numeral">I</span>The world</h3>
+        <ul>
+          <li>Entries for people, places, factions, languages, calendars, events, artifacts, ideas, and lots of other things</li>
+          <li>Type a name and it becomes a clickable link; every entry lists what links to it</li>
+          <li>You can add your own categories and forms to further customize your universe</li>
+          <li>Family trees, for people and for species and cultures</li>
+          <li>Languages with a lexicon, dialects that inherit, and a name generator that follows each language’s patterns</li>
+          <li>A query builder, with bulk edit on the results</li>
+          <li>CSV import with a template per form, and CSV export back out</li>
+          <li>Focus mode: narrow everything to one book, one tag, or one query</li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="numeral">II</span>Time and place</h3>
+        <ul>
+          <li>Calendars with their own months and eras</li>
+          <li>Relative dates: “ten years after the Happening”</li>
+          <li>A chronology that draws every calendar on one axis</li>
+          <li>Clickable maps created from your own images, with pins, drawable regions, and routes</li>
+          <li>Era layers, and sub-maps cut from a parent map automatically</li>
+          <li>A terrain generator for new maps</li>
+          <li>World Health report: broken links, orphaned entries, and other issues</li>
+          <li>Four color themes: night, parchment, verdant, ember</li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="numeral">III</span>The book</h3>
+        <ul>
+          <li>A full-screen Writer mode with a word tally for the session</li>
+		  <li>Custom writing goals at the day, week, and month levels</li>
+          <li>Author notes in your manuscript that export as highlights and don't count toward your word count</li>
+          <li>Export to Word with real headings, or to Markdown</li>
+          <li>Two windows open at once, with the chapter in one and the world in the other</li>
+          <li>Rest the cursor on a name while writing and a card says who it is</li>
+          <li>Version history on every entry, rotating backups, and JSON and Markdown export</li>
+          <li>A sample world on first launch to show you how it works</li>
+        </ul>
       </div>
     </div>
-  </div>
+  </section>
 </main>
 
 <footer class="wrap bottom">
