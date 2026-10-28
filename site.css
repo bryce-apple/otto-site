@@ -124,6 +124,7 @@ figcaption.inline .label{padding-top:3px;flex:none}
 .pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:44px}
 @media (max-width:760px){.pair{grid-template-columns:1fr;gap:56px}}
 .frame img.tree{aspect-ratio:3680/1400}
+.frame img.tall{aspect-ratio:2880/2600}
 .frame img.wide{aspect-ratio:2880/1240}
 figcaption.below{display:flex;gap:14px;margin-top:12px;max-width:44rem}
 figcaption.below .label{padding-top:3px;flex:none}
