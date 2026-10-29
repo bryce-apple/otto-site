@@ -44,7 +44,7 @@ class="here">` instead of a link.
 
 ## Before going live
 - Fill in [Your name] on index.html and the bracketed paragraph on about.html.
-- Replace hello@example.com (six footers and the 404 page) with your address.
+- Replace meateaapple@gmail.com (six footers and the 404 page) with your address.
 - changelog.html holds the release history; add an entry there and the three newest on index.html at each release.
 - Make og:image an absolute URL (https://yourdomain/assets/og-night-1200x630.png) once you know the domain.
 
