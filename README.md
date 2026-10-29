@@ -38,14 +38,14 @@ for a straight note). The top of site.css lists every class with a line
 on what it is for.
 
 The header and footer are pasted into each page (there is no template).
-A change to either means the same edit in all six pages. The header
+A change to either means the same edit in all seven pages. The header
 differs only in the current page's name, which is a plain `<span
 class="here">` instead of a link.
 
-## Before going live
-- Fill in [Your name] on index.html and the bracketed paragraph on about.html.
-- Replace meateaapple@gmail.com (six footers and the 404 page) with your address.
-- changelog.html holds the release history; add an entry there and the three newest on index.html at each release.
+## At each release
+- The contact address (meateaapple@gmail.com) is in every footer, on the 404 page and twice on report.html; change it with a find-and-replace across the folder.
+- report.html links the Google form that collects bug reports and ideas; the spreadsheet behind it is private.
+- changelog.html holds the release history; add an entry there at each release.
 - Make og:image an absolute URL (https://yourdomain/assets/og-night-1200x630.png) once you know the domain.
 
 ## The night / parchment switch
